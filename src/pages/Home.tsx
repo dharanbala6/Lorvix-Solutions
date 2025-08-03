@@ -14,28 +14,22 @@ const Home = () => {
       description: "Our software solutions are optimized for speed and performance, ensuring your business operations run smoothly."
     },
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and 99.9% uptime guarantee to keep your business data safe and accessible."
-    },
-    {
       icon: <Code className="h-6 w-6" />,
       title: "Custom Solutions",
-      description: "Tailored software and web development services designed specifically for your business needs."
+      description: "Tailored web development services designed specifically for your business needs."
     },
     {
       icon: <Users className="h-6 w-6" />,
       title: "Expert Support",
-      description: "24/7 customer support from our team of experienced developers and business consultants."
+      description: "Personalized support directly from the creators — we're here whenever you need us."
     }
   ];
 
   const benefits = [
-    "Streamline business operations with automated solutions",
     "Increase productivity with intuitive software interfaces",
-    "Scale your business with robust, cloud-based systems",
-    "Reduce operational costs through efficient workflows",
-    "Enhance customer experience with professional web presence"
+    "Enhance customer experience with professional web presence",
+    "Tailored softwares for B2B",
+    "Life time, Satisfying Support after purchace"
   ];
 
   return (
@@ -46,7 +40,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            Empowering Businesses with{' '}
+            Empowering Bussiness with{' '}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Software Solutions
             </span>
@@ -65,7 +59,7 @@ const Home = () => {
             </Button>
             <Button variant="professional" size="lg" asChild className="text-lg px-8 py-4">
               <Link to="/contact">
-                Get Your Business a Web
+                Get Your Business a Website
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -81,12 +75,12 @@ const Home = () => {
               Why Choose Lorvix?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're not just another software company. We're your technology partners, 
+              We're not just another software company. We're your technology partner, 
               committed to delivering solutions that drive real business results.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <Card key={index} className="text-center shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-2">
                 <CardHeader>
@@ -120,15 +114,6 @@ const Home = () => {
                 </div>
               </div>
               <div className="text-center lg:text-right">
-                <div className="bg-primary/10 rounded-2xl p-8 mb-6">
-                  <div className="flex items-center justify-center lg:justify-end space-x-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-primary fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-2xl font-bold text-primary">98% Client Satisfaction</p>
-                  <p className="text-muted-foreground">Based on 500+ completed projects</p>
-                </div>
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/contact">Start Your Project Today</Link>
                 </Button>
@@ -167,7 +152,7 @@ const Home = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Payment tracking & reminders</span>
+                    <span>Payment Due Tracking</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-primary" />

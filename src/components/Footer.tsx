@@ -9,10 +9,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">L</span>
-              </div>
-              <span className="text-2xl font-bold">Lorvix</span>
+              <img
+              src="./public/favicon.ico" // <-- Replace with your actual logo path
+              alt="Lorvix Logo"
+              className="h-8 w-8 object-contain"/>
+              <span className="text-2xl font-bold">Lorvix Solutions</span>
             </div>
             <p className="text-sm text-background/80">
               Empowering businesses with innovative software solutions and professional web development services.
@@ -63,15 +64,16 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-background/80" />
-                <span className="text-sm text-background/80">info@lorvix.com</span>
+                <span className="text-sm text-background/80">info@lorvixsolution.in</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-background/80" />
-                <span className="text-sm text-background/80">+1 (555) 123-4567</span>
+                <span className="text-sm text-background/80">+91 9884948383</span>
+                <span className="text-sm text-background/80">+91 7200159832</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-background/80" />
-                <span className="text-sm text-background/80">Business District, Tech City</span>
+                <span className="text-sm text-background/80">Chennai</span>
               </div>
             </div>
           </div>

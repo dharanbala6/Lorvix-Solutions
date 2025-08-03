@@ -8,6 +8,8 @@ import Software from "./pages/Software";
 import WebDevelopment from "./pages/WebDevelopment";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "@/components/ScrollToTop"; // ✅ Import ScrollToTop
+
 
 const queryClient = new QueryClient();
 
@@ -17,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/software" element={<Software />} />

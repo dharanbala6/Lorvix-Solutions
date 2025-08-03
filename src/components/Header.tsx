@@ -52,7 +52,7 @@ const Header = () => {
               <Link to="/software">Get Software</Link>
             </Button>
             <Button variant="hero" size="sm" asChild>
-              <Link to="/contact">Get Your Web</Link>
+              <Link to="/contact">Get Your Website</Link>
             </Button>
           </div>
 

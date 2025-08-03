@@ -62,7 +62,7 @@ const Software = () => {
   const pricingFeatures = [
     "Unlimited invoice creation",
     "Client management system",
-    "Payment tracking & reminders",
+    "Payment Due Tracking",
     "Financial reports & analytics",
     "Multi-currency support",
     "Cloud storage & backup",

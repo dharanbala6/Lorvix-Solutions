@@ -21,7 +21,7 @@ const Software = () => {
     {
       icon: <FileText className="h-6 w-6" />,
       title: "Smart Invoice Creation",
-      description: "Generate professional invoices in seconds with customizable templates and automated calculations."
+      description: "Generate professional invoices in seconds with  automated calculations."
     },
     {
       icon: <BarChart3 className="h-6 w-6" />,
@@ -29,34 +29,17 @@ const Software = () => {
       description: "Track your business performance with comprehensive reports, revenue insights, and payment analytics."
     },
     {
-      icon: <Calendar className="h-6 w-6" />,
-      title: "Payment Scheduling",
-      description: "Set up automatic reminders, recurring invoices, and track payment due dates effortlessly."
-    },
-    {
-      icon: <DollarSign className="h-6 w-6" />,
-      title: "Multi-Currency Support",
-      description: "Handle international clients with support for multiple currencies and automatic exchange rates."
-    },
-    {
       icon: <Users className="h-6 w-6" />,
       title: "Client Management",
-      description: "Organize client information, payment history, and communication logs in one central location."
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Secure & Compliant",
-      description: "Bank-level security with automatic backups and compliance with industry standards."
+      description: "Organize client information in one central location."
     }
   ];
 
   const benefits = [
     "Reduce invoice processing time by 80%",
-    "Improve cash flow with faster payments",
     "Eliminate manual data entry errors",
     "Access your data from anywhere, anytime",
-    "Scale with your growing business needs",
-    "Integrate with popular accounting software"
+    "Get monthly sales data extracted as excel sheets to your desk"
   ];
 
   const pricingFeatures = [
@@ -64,10 +47,6 @@ const Software = () => {
     "Client management system",
     "Payment Due Tracking",
     "Financial reports & analytics",
-    "Multi-currency support",
-    "Cloud storage & backup",
-    "Mobile app access",
-    "24/7 customer support",
     "Free updates & new features"
   ];
 
@@ -84,7 +63,7 @@ const Software = () => {
                 Meet <span className="bg-gradient-primary bg-clip-text text-transparent">InvMaster</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                The most intuitive invoice management software designed for modern businesses. 
+                The most intuitive invoice management software designed for B2B businesses. 
                 Streamline your billing process, track payments, and grow your revenue with ease.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -97,10 +76,6 @@ const Software = () => {
                   Get InvMaster Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="professional" size="lg" className="text-lg px-8 py-4">
-                  <Download className="mr-2 h-5 w-5" />
-                  Free Trial
-                </Button>
               </div>
             </div>
             <div className="relative">
@@ -112,7 +87,7 @@ const Software = () => {
                 />
               </div>
               <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-semibold">
-                New Version 2.0
+                Version 1.0
               </div>
             </div>
           </div>
@@ -153,52 +128,27 @@ const Software = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Transform Your Invoice Management
-              </h2>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground text-lg">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-gradient-card rounded-2xl p-8 shadow-professional">
-              <div className="text-center mb-6">
-                <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">Boost Productivity</h3>
-                <p className="text-muted-foreground">
-                  Join thousands of businesses that have streamlined their operations with InvMaster
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary">80%</div>
-                  <div className="text-sm text-muted-foreground">Time Saved</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">50%</div>
-                  <div className="text-sm text-muted-foreground">Faster Payments</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">99.9%</div>
-                  <div className="text-sm text-muted-foreground">Uptime</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">5K+</div>
-                  <div className="text-sm text-muted-foreground">Happy Users</div>
-                </div>
-              </div>
-            </div>
-          </div>
+   <section className="py-20 bg-muted/30">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div className="max-w-4xl mx-auto px-4">
+      <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-left">
+        Transform Your Invoice Management
+      </h2>
+      <p className="text-xl text-muted-foreground mb-6 text-left">
+        Everything you need to manage your business invoicing, all in one powerful package.
+      </p>
+      <div className="space-y-4">
+        {benefits.map((benefit, index) => (
+      <div key={index} className="flex items-start space-x-3">
+        <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+        <span className="text-muted-foreground text-lg text-left">{benefit}</span>
         </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Pricing Section */}
       <section className="py-20">
@@ -220,10 +170,9 @@ const Software = () => {
               <CardTitle className="text-3xl font-bold">InvMaster Pro</CardTitle>
               <CardDescription className="text-lg">Perfect for growing businesses</CardDescription>
               <div className="mt-6">
-                <span className="text-5xl font-bold text-primary">$49</span>
-                <span className="text-xl text-muted-foreground">/month</span>
+                <span className="text-5xl font-bold text-primary">₹3499</span>
+                <span className="text-xl text-muted-foreground">/3 years</span>
               </div>
-              <p className="text-muted-foreground mt-2">or $490/year (save 17%)</p>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -241,15 +190,12 @@ const Software = () => {
                   className="flex-1"
                   onClick={() => window.open('#', '_blank')}
                 >
-                  Get InvMaster Pro
+                  Get InvMaster
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="professional" size="lg" className="flex-1">
-                  Start Free Trial
                 </Button>
               </div>
               <p className="text-center text-sm text-muted-foreground">
-                30-day money-back guarantee • No setup fees • Cancel anytime
+                15-day money-back guarantee • No setup fees • Cancel anytime
               </p>
             </CardContent>
           </Card>

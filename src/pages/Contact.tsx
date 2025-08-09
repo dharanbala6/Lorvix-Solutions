@@ -76,20 +76,20 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "info@lorvix.com",
-      link: "mailto:info@lorvix.com"
+      value: "lorvixsolutions@gmail.com",
+      link: "mailto:lorvixsolutions@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 98849 48383, +91 72001 59832",
       link: "tel:+15551234567"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Office",
-      value: "Business District, Tech City",
-      link: "#"
+      value: "Chennai, Tamil Nadu",
+      
     }
   ];
 
@@ -165,7 +165,7 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email">Email Address</Label>
                       <Input
                         id="email"
                         name="email"
@@ -173,25 +173,27 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="your@email.com"
-                        required
+                      
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
+                      <Label htmlFor="phone">Phone Number *</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 12345-67890"
+                        required
+                        
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="requirements">Web Development Requirements *</Label>
+                    <Label htmlFor="requirements">Requirements *</Label>
                     <Textarea
                       id="requirements"
                       name="requirements"
@@ -274,30 +276,6 @@ const Contact = () => {
                   ))}
                 </CardContent>
               </Card>
-
-              {/* Stats */}
-              <Card className="bg-gradient-card shadow-card">
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">24h</div>
-                      <div className="text-sm text-muted-foreground">Response Time</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">200+</div>
-                      <div className="text-sm text-muted-foreground">Projects Completed</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">98%</div>
-                      <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">5★</div>
-                      <div className="text-sm text-muted-foreground">Average Rating</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -311,7 +289,7 @@ const Contact = () => {
               What Happens Next?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Once you submit your project details, here's how we'll work together to bring your vision to life.
+              Once you submit your Requirements, here's how we'll work together to bring your vision to life.
             </p>
           </div>
 

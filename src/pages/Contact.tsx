@@ -125,13 +125,6 @@ const Contact = () => {
             Ready to transform your business with a professional website? 
             Fill out the form below and our team will create a custom proposal for your project.
           </p>
-          
-          <div className="flex items-center justify-center space-x-1 mb-8">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-5 w-5 text-secondary fill-current" />
-            ))}
-            <span className="ml-2 text-muted-foreground">4.9/5 from 200+ satisfied clients</span>
-          </div>
         </div>
       </section>
 

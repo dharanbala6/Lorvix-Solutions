@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import emailjs from "@emailjs/browser";
 import { 
   Send, 
   CheckCircle, 
@@ -42,18 +43,25 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual email service)
     try {
-      // In a real implementation, you would send this data to your backend
-      // which would then send an email to your specified address
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await emailjs.send(
+        "service_lorvix",       // Your EmailJS Service ID
+        "template_k9ri6mx",     // Your EmailJS Template ID
+        {
+          businessName: formData.businessName,
+          contactPerson: formData.contactPerson,
+          email: formData.email,
+          phone: formData.phone,
+          requirements: formData.requirements
+        },
+        "bylPLzWWZWGima_SY"     // Your EmailJS Public Key
+      );
+
       toast({
         title: "Message Sent Successfully!",
         description: "We'll get back to you within 24 hours to discuss your project.",
       });
 
-      // Reset form
       setFormData({
         businessName: '',
         contactPerson: '',
@@ -61,7 +69,9 @@ const Contact = () => {
         phone: '',
         requirements: ''
       });
+
     } catch (error) {
+      console.error("EmailJS Error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or contact us directly.",

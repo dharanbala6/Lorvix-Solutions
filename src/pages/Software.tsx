@@ -152,55 +152,79 @@ const Software = () => {
 
       {/* Pricing Section */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Everything you need to manage your business invoicing, all in one powerful package.
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
 
+          {/* Basic Plan */}
           <Card className="shadow-professional border-2 border-primary/20 relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-6 py-2 rounded-full font-semibold">
-              Most Popular
-            </div>
             <CardHeader className="text-center pb-8 pt-12">
-              <CardTitle className="text-3xl font-bold">InvMaster Pro</CardTitle>
-              <CardDescription className="text-lg">Perfect for growing businesses</CardDescription>
-              <div className="mt-6">
-                <span className="text-5xl font-bold text-primary">₹3499</span>
-                <span className="text-xl text-muted-foreground">/3 years</span>
+              <CardTitle className="text-2xl font-bold">InvMaster Basic</CardTitle>
+              <CardDescription className="text-lg">Ideal for small businesses</CardDescription>
+              {/* Price Layout Same as Pro Plan */}
+              <div className="mt-6 flex items-center justify-center space-x-3">
+                <span className="text-5xl font-bold text-primary">₹1499</span>
+                <span className="text-xl text-muted-foreground">/year</span>
+                {/* Transparent placeholder for badge to keep height same */}
+                
               </div>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {pricingFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </div>
-                ))}
+
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Unlimited invoice creation</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Client management system</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Payment Due Tracking</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Financial reports & analytics</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Free updates & new features</span></div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
-                  className="flex-1"
-                  onClick={() => window.open('#', '_blank')}
-                >
-                  Get InvMaster
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
+
+              <Button variant="hero" size="lg" className="w-full">Get InvMaster <ArrowRight className="ml-2 h-5 w-5" /></Button>
               <p className="text-center text-sm text-muted-foreground">
                 15-day money-back guarantee • No setup fees • Cancel anytime
               </p>
             </CardContent>
           </Card>
+
+
+          {/* Pro Plan */}
+          <Card className="shadow-professional border-2 border-primary/20 relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-6 py-2 rounded-full font-semibold">
+              Most Popular
+            </div>
+
+            <CardHeader className="text-center pb-8 pt-12">
+              <CardTitle className="text-2xl font-bold">InvMaster Pro</CardTitle>
+              <CardDescription className="text-lg">Perfect for growing businesses</CardDescription>
+
+              {/* Price + Gradient Save Badge */}
+              <div className="mt-6 flex items-center justify-center space-x-3">
+                <span className="text-5xl font-bold text-primary">₹3499</span>
+                <span className="text-xl text-muted-foreground">/3 years</span>
+                <span className="bg-gradient-to-r from-pink-500 to-orange-500 text-white text-sm font-semibold px-3 py-1 rounded-full shadow-md">
+                  Save 22%
+                </span>
+              </div>
+
+            </CardHeader>
+
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Unlimited invoice creation</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Client management system</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Payment Due Tracking</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Financial reports & analytics</span></div>
+                <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Free updates & new features</span></div>
+              </div>
+
+              <Button variant="hero" size="lg" className="w-full">Get InvMaster <ArrowRight className="ml-2 h-5 w-5" /></Button>
+              <p className="text-center text-sm text-muted-foreground">
+                15-day money-back guarantee • No setup fees • Cancel anytime
+              </p>
+            </CardContent>
+          </Card>
+
         </div>
       </section>
+
 
       <Footer />
     </div>

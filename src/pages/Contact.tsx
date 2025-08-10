@@ -45,8 +45,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_lorvix",       // Your EmailJS Service ID
-        "template_k9ri6mx",     // Your EmailJS Template ID
+        'service_lorvix',        // Your EmailJS Service ID
+        'template_k9ri6mx',     // Your EmailJS Template ID
         {
           businessName: formData.businessName,
           contactPerson: formData.contactPerson,
@@ -54,7 +54,7 @@ const Contact = () => {
           phone: formData.phone,
           requirements: formData.requirements
         },
-        "bylPLzWWZWGima_SY"     // Your EmailJS Public Key
+        'bylPLzWWZWGima_SY'     // Your EmailJS Public Key
       );
 
       toast({
@@ -71,10 +71,10 @@ const Contact = () => {
       });
 
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("EmailJS error:", error); // See the full error in your terminal/console
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again or contact us directly.",
+        description: `Failed to send message: ${error?.text || error?.message || "Unknown error"}`,
         variant: "destructive",
       });
     } finally {

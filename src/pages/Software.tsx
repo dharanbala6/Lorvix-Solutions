@@ -67,15 +67,16 @@ const Software = () => {
                 Streamline your billing process, track payments, and grow your revenue with ease.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
-                  onClick={() => window.open('#', '_blank')}
+                <Button
+                  variant="hero"
+                  size="lg"
+                  onClick={() => document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })}
                   className="text-lg px-8 py-4"
                 >
                   Get InvMaster Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
+
               </div>
             </div>
             <div className="relative">
@@ -151,7 +152,7 @@ const Software = () => {
 
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section id="pricing" className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Basic Plan */}
@@ -177,7 +178,11 @@ const Software = () => {
                 <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Free updates & new features</span></div>
               </div>
 
-              <Button variant="hero" size="lg" className="w-full">Get InvMaster <ArrowRight className="ml-2 h-5 w-5" /></Button>
+              <Button asChild variant="hero" size="lg" className="w-full">
+                <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
+                  Get InvMaster <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
               <p className="text-center text-sm text-muted-foreground">
                 15-day money-back guarantee • No setup fees • Cancel anytime
               </p>
@@ -215,7 +220,11 @@ const Software = () => {
                 <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Free updates & new features</span></div>
               </div>
 
-              <Button variant="hero" size="lg" className="w-full">Get InvMaster <ArrowRight className="ml-2 h-5 w-5" /></Button>
+              <Button asChild variant="hero" size="lg" className="w-full">
+                <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
+                  Get InvMaster <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
               <p className="text-center text-sm text-muted-foreground">
                 15-day money-back guarantee • No setup fees • Cancel anytime
               </p>

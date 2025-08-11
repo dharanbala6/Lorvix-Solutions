@@ -184,7 +184,7 @@ const Software = () => {
                 </a>
               </Button>*/}
               <Button asChild variant="hero" size="lg" className="w-full">
-                <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
+                <a target="_blank" rel="noopener noreferrer">
                   Comming Soon
                 </a>
               </Button>
@@ -231,7 +231,7 @@ const Software = () => {
                 </a>
               </Button>*/}
               <Button asChild variant="hero" size="lg" className="w-full">
-                <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
+                <a target="_blank" rel="noopener noreferrer">
                   Comming Soon
                 </a>
               </Button>

@@ -73,7 +73,7 @@ const Software = () => {
                   onClick={() => document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })}
                   className="text-lg px-8 py-4"
                 >
-                  Get InvMaster Now
+                  Comming Soon
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
 
@@ -178,9 +178,14 @@ const Software = () => {
                 <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Free updates & new features</span></div>
               </div>
 
-              <Button asChild variant="hero" size="lg" className="w-full">
+              {/*<Button asChild variant="hero" size="lg" className="w-full">
                 <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
                   Get InvMaster <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>*/}
+              <Button asChild variant="hero" size="lg" className="w-full">
+                <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
+                  Comming Soon
                 </a>
               </Button>
               <p className="text-center text-sm text-muted-foreground">
@@ -220,9 +225,14 @@ const Software = () => {
                 <div className="flex items-center space-x-2"><CheckCircle className="h-5 w-5 text-primary" /> <span>Free updates & new features</span></div>
               </div>
 
-              <Button asChild variant="hero" size="lg" className="w-full">
+             {/*<Button asChild variant="hero" size="lg" className="w-full">
                 <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
                   Get InvMaster <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>*/}
+              <Button asChild variant="hero" size="lg" className="w-full">
+                <a href="https://invmaster-dgag.onrender.com/register" target="_blank" rel="noopener noreferrer">
+                  Comming Soon
                 </a>
               </Button>
               <p className="text-center text-sm text-muted-foreground">

@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-sm text-background/60">
-            © 2024 Lorvix. All rights reserved. Empowering businesses with software solutions.
+            © 2025 Lorvix. All rights reserved. Empowering businesses with software solutions.
           </p>
         </div>
       </div>

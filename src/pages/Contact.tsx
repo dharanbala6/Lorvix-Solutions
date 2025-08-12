@@ -45,17 +45,17 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_lorvix',        // Your EmailJS Service ID
-        'template_k9ri6mx',     // Your EmailJS Template ID
-        {
-          businessName: formData.businessName,
-          contactPerson: formData.contactPerson,
-          email: formData.email,
-          phone: formData.phone,
-          requirements: formData.requirements
-        },
-        'bylPLzWWZWGima_SY'     // Your EmailJS Public Key
-      );
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  {
+    businessName: formData.businessName,
+    contactPerson: formData.contactPerson,
+    email: formData.email,
+    phone: formData.phone,
+    requirements: formData.requirements
+  },
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+);
 
       toast({
         title: "Message Sent Successfully!",

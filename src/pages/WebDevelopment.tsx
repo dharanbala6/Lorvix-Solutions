@@ -41,6 +41,16 @@ const WebDevelopment = () => {
       icon: <Palette className="h-6 w-6" />,
       title: "UI/UX Design",
       description: "Beautiful, intuitive designs that engage your visitors and drive business results."
+    },
+    {
+      icon: <Code className="h-6 w-6" />,
+      title: "Interactive Features",
+      description: "Engage visitors with interactive elements like sliders, galleries, and dynamic animations."
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "Website Maintenance & Support",
+      description: "Ongoing updates, security checks, and technical assistance to keep your website running smoothly."
     }
   ];
 
@@ -139,14 +149,17 @@ const WebDevelopment = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-2">
-                <CardHeader>
+              <Card
+                key={index}
+                className="shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-2"
+              >
+                <CardHeader className="flex flex-col items-center text-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mb-4">
                     {service.icon}
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="text-center">
                   <CardDescription className="text-base">
                     {service.description}
                   </CardDescription>
@@ -156,6 +169,7 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
+
 
       {/* Portfolio Examples */}
       <section className="py-20 bg-muted/30">
@@ -196,32 +210,29 @@ const WebDevelopment = () => {
 
       {/* Benefits Section */}
      <section className="py-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-9">
-    <div className="flex justify-center">
-      <div className="max-w-3xl w-full">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-          Why Your Business Needs a Professional Website
-        </h2>
-        <div className="space-y-4 md:text-center text-left">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="flex md:justify-center items-start md:items-center space-x-3"
-            >
-              <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1 md:mt-0" />
-              <span className="text-muted-foreground text-lg leading-snug">{benefit}</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-9">
+          <div className="flex justify-center">
+            <div className="max-w-3xl w-full">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+                Why Your Business Needs a Professional Website
+              </h2>
+              <div className="space-y-4 mx-auto max-w-xl text-left">
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
+                    <span className="text-muted-foreground text-lg leading-snug">
+                      {benefit}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
+      </section>
       {/* Process Section */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

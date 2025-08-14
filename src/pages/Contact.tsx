@@ -60,6 +60,7 @@ const Contact = () => {
       toast({
         title: "Message Sent Successfully!",
         description: "We'll get back to you within 24 hours to discuss your project.",
+        className: "bg-green-500 text-white", 
       });
 
       setFormData({
@@ -183,15 +184,18 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number *</Label>
                       <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="+91 12345-67890"
-                        required
-                        
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+91 12345-67890"
+                      required
+                      inputMode="numeric" // shows numeric keypad on mobile
+                      pattern="[0-9]{10}" // only 10 digits allowed
+                      maxLength={10} // prevent extra digits
                       />
+
                     </div>
                   </div>
 

@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img
-              src="/favicon.ico" // <-- Replace with your actual logo path
+              src="logo.png" // <-- Replace with your actual logo path
               alt="Lorvix Logo"
               className="h-8 w-8 object-contain"/>
               <span className="text-2xl font-bold">Lorvix Solutions</span>
@@ -54,7 +54,6 @@ const Footer = () => {
               <li className="text-sm text-background/80">Invoice Management</li>
               <li className="text-sm text-background/80">Business Software</li>
               <li className="text-sm text-background/80">Custom Web Development</li>
-              <li className="text-sm text-background/80">E-commerce Solutions</li>
             </ul>
           </div>
 

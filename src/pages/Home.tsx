@@ -58,7 +58,7 @@ const Home = () => {
               </Link>
             </Button>
             <Button variant="professional" size="lg" asChild className="text-lg px-8 py-4">
-              <Link to="/contact">
+              <Link to="/web-development">
                 Get Your Business a Website
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

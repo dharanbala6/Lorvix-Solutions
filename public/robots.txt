@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://lorvixsolutions.netlify.app/sitemap.xml
+Sitemap: https://lorvixsolutions.in/sitemap.xml

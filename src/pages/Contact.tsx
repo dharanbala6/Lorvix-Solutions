@@ -8,11 +8,11 @@ import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import emailjs from "@emailjs/browser";
-import { 
-  Send, 
-  CheckCircle, 
-  Mail, 
-  Phone, 
+import {
+  Send,
+  CheckCircle,
+  Mail,
+  Phone,
   MapPin,
   Clock,
   Users,
@@ -45,22 +45,22 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-  import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  {
-    businessName: formData.businessName,
-    contactPerson: formData.contactPerson,
-    email: formData.email,
-    phone: formData.phone,
-    requirements: formData.requirements
-  },
-  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-);
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          businessName: formData.businessName,
+          contactPerson: formData.contactPerson,
+          email: formData.email,
+          phone: formData.phone,
+          requirements: formData.requirements
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       toast({
         title: "Message Sent Successfully!",
         description: "We'll get back to you within 24 hours to discuss your project.",
-        className: "bg-green-500 text-white", 
+        className: "bg-green-500 text-white",
       });
 
       setFormData({
@@ -100,7 +100,7 @@ const Contact = () => {
       icon: <MapPin className="h-5 w-5" />,
       label: "Office",
       value: "Chennai, Tamil Nadu",
-      
+
     }
   ];
 
@@ -113,9 +113,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="lx-root min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -123,7 +123,7 @@ const Contact = () => {
             Get Your Business <span className="bg-gradient-primary bg-clip-text text-transparent">Online</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with a professional website? 
+            Ready to transform your business with a professional website?
             Fill out the form below and our team will create a custom proposal for your project.
           </p>
         </div>
@@ -177,23 +177,23 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="your@email.com"
-                      
+
                       />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number *</Label>
                       <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="+91 12345-67890"
-                      required
-                      inputMode="numeric" // shows numeric keypad on mobile
-                      pattern="[0-9]{10}" // only 10 digits allowed
-                      maxLength={10} // prevent extra digits
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="+91 12345-67890"
+                        required
+                        inputMode="numeric" // shows numeric keypad on mobile
+                        pattern="[0-9]{10}" // only 10 digits allowed
+                        maxLength={10} // prevent extra digits
                       />
 
                     </div>
@@ -212,10 +212,10 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    variant="hero" 
-                    size="lg" 
+                  <Button
+                    type="submit"
+                    variant="hero"
+                    size="lg"
                     className="w-full"
                     disabled={isSubmitting}
                   >
@@ -254,8 +254,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">{info.label}</div>
-                        <a 
-                          href={info.link} 
+                        <a
+                          href={info.link}
                           className="font-medium text-foreground hover:text-primary transition-colors"
                         >
                           {info.value}

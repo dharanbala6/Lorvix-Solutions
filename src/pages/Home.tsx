@@ -262,12 +262,12 @@ export default function Home() {
     }
   }, []);
 
-  const heroRef   = useReveal();
+  const heroRef = useReveal();
   const heroRight = useRevealRight();
-  const portRef   = useReveal();
-  const whyRef    = useReveal();
-  const svcRef    = useReveal();
-  const ctaRef    = useReveal();
+  const portRef = useReveal();
+  const whyRef = useReveal();
+  const svcRef = useReveal();
+  const ctaRef = useReveal();
 
   return (
     <div className="lx-root min-h-screen bg-white">
@@ -278,9 +278,9 @@ export default function Home() {
 
         {/* Decorative blobs */}
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-30 pointer-events-none"
-          style={{ background:'radial-gradient(circle,#93c5fd 0%,#c4b5fd 60%,transparent 80%)' }} />
+          style={{ background: 'radial-gradient(circle,#93c5fd 0%,#c4b5fd 60%,transparent 80%)' }} />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-20 pointer-events-none"
-          style={{ background:'radial-gradient(circle,#bfdbfe,transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle,#bfdbfe,transparent 70%)' }} />
 
         {/* Floating badges (decorative) */}
         <div className="lx-float absolute top-28 right-[5%] hidden lg:flex items-center gap-2 bg-white rounded-xl px-4 py-2.5 shadow-lg shadow-blue-100 border border-blue-100 text-sm font-semibold text-slate-700 z-10">
@@ -310,7 +310,7 @@ export default function Home() {
 
               {/* SEO keywords hidden for crawlers */}
               <p className="sr-only">
-                Website maker in Chennai, web development company Chennai Tamil Nadu, 
+                Website maker in Chennai, web development company Chennai Tamil Nadu,
                 affordable website maker in USA, professional website design India,
                 business website development, custom website Chennai.
               </p>
@@ -327,7 +327,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-5 text-sm text-slate-500">
-                {['Free consultation','No hidden charges','Lifetime support'].map(t => (
+                {['Free consultation', 'No hidden charges', 'Lifetime support'].map(t => (
                   <span key={t} className="flex items-center gap-1.5">
                     <CheckCircle className="h-4 w-4 text-emerald-500" /> {t}
                   </span>
@@ -342,19 +342,19 @@ export default function Home() {
                 <p className="text-[10px] font-bold uppercase tracking-[.15em] text-slate-400 mb-4">Our Track Record</p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon:<Globe className="h-5 w-5"/>, label:'Websites Delivered', val:3, suf:'+' },
-                    { icon:<Star className="h-5 w-5"/>,  label:'Client Satisfaction', val:100, suf:'%' },
-                    { icon:<Clock className="h-5 w-5"/>, label:'Support Response',   val:24, suf:'h' },
-                    { icon:<Zap className="h-5 w-5"/>,   label:'Weeks to Launch',    val:'1–4', suf:'wk' },
-                  ].map((r,i) => (
+                    { icon: <Globe className="h-5 w-5" />, label: 'Websites Delivered', val: 3, suf: '+' },
+                    { icon: <Star className="h-5 w-5" />, label: 'Client Satisfaction', val: 100, suf: '%' },
+                    { icon: <Clock className="h-5 w-5" />, label: 'Support Response', val: 24, suf: 'h' },
+                    { icon: <Zap className="h-5 w-5" />, label: 'Weeks to Launch', val: '1–4', suf: 'wk' },
+                  ].map((r, i) => (
                     <div key={i} className="flex items-start gap-3 rounded-xl p-4"
-                      style={{ background:'linear-gradient(135deg,#eff6ff,#f5f3ff)' }}>
+                      style={{ background: 'linear-gradient(135deg,#eff6ff,#f5f3ff)' }}>
                       <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white flex-shrink-0"
-                        style={{ background:'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
+                        style={{ background: 'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
                         {r.icon}
                       </div>
                       <div>
-                        <div className="text-2xl font-extrabold text-slate-900 leading-none" style={{ animation:'lx-countup .5s ease both', animationDelay:`${i*.1}s` }}>
+                        <div className="text-2xl font-extrabold text-slate-900 leading-none" style={{ animation: 'lx-countup .5s ease both', animationDelay: `${i * .1}s` }}>
                           {typeof r.val === 'number' ? (
                             <Counter to={r.val} suffix={r.suf} />
                           ) : (
@@ -372,7 +372,7 @@ export default function Home() {
               </div>
 
               {/* Contact card */}
-              <div className="rounded-2xl p-5 text-white" style={{ background:'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
+              <div className="rounded-2xl p-5 text-white" style={{ background: 'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
                 <p className="font-bold text-base mb-1">Talk to us directly</p>
                 <p className="text-sm text-blue-100 mb-4">Chennai &amp; USA enquiries welcome — we respond within hours</p>
                 <div className="flex flex-wrap gap-3">
@@ -409,13 +409,13 @@ export default function Home() {
               {portfolio.map((p, i) => (
                 <a key={i} href={p.url} target="_blank" rel="noopener noreferrer"
                   className="lx-port-card group relative rounded-2xl border-2 border-slate-100 overflow-hidden bg-white block"
-                  style={{ animationDelay:`${i*.12}s` }}>
+                  style={{ animationDelay: `${i * .12}s` }}>
                   <div className="port-shine" />
 
                   {/* Header */}
                   <div className="h-52 flex flex-col items-center justify-center relative pb-10" style={{ background: p.grad }}>
                     <div className="absolute inset-0 opacity-20"
-                      style={{ backgroundImage:'radial-gradient(circle at 1.5px 1.5px,rgba(255,255,255,.8) 1.5px,transparent 0)', backgroundSize:'20px 20px' }} />
+                      style={{ backgroundImage: 'radial-gradient(circle at 1.5px 1.5px,rgba(255,255,255,.8) 1.5px,transparent 0)', backgroundSize: '20px 20px' }} />
                     <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-3 z-10 shadow-md p-2">
                       <img
                         src={p.logo}
@@ -467,7 +467,7 @@ export default function Home() {
       </section>
 
       {/* ════ WHY US ════ */}
-      <section className="py-24" style={{ background:'linear-gradient(135deg,#f0f7ff 0%,#f5f3ff 100%)' }}>
+      <section className="py-24" style={{ background: 'linear-gradient(135deg,#f0f7ff 0%,#f5f3ff 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div ref={whyRef} className="lx-hidden">
             <div className="text-center mb-14">
@@ -479,9 +479,9 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {whyUs.map((w, i) => (
                 <div key={i} className="lx-why-card bg-white rounded-2xl p-7 border border-blue-50 shadow-md"
-                  style={{ animationDelay:`${i*.1}s` }}>
+                  style={{ animationDelay: `${i * .1}s` }}>
                   <div className="why-icon w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
-                    style={{ background:'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
+                    style={{ background: 'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
                     {w.icon}
                   </div>
                   <h3 className="font-extrabold text-slate-900 text-lg mb-3 leading-tight">{w.title}</h3>
@@ -507,10 +507,10 @@ export default function Home() {
               {/* Web dev */}
               <div className="lx-card-hover relative overflow-hidden rounded-3xl border-2 border-blue-100 p-9 bg-gradient-to-br from-blue-50 to-white group">
                 <div className="absolute top-0 right-0 w-60 h-60 rounded-full -translate-y-1/2 translate-x-1/2 opacity-40 pointer-events-none"
-                  style={{ background:'radial-gradient(circle,#bfdbfe,transparent 70%)' }} />
+                  style={{ background: 'radial-gradient(circle,#bfdbfe,transparent 70%)' }} />
                 <div className="relative">
                   <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200"
-                    style={{ background:'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
+                    style={{ background: 'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
                     <Globe className="h-7 w-7" />
                   </div>
                   <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Website Development</h3>
@@ -519,12 +519,12 @@ export default function Home() {
                     Travel agencies, manufacturers, engineering firms — every industry, built to convert.
                   </p>
                   <ul className="space-y-2.5 mb-8">
-                    {['Custom design for your industry & brand','Mobile-first, blazing fast, Google-ready',
-                      'WhatsApp & enquiry form integration','Delivered in 1–4 weeks, not months'].map(f => (
-                      <li key={f} className="flex items-center gap-2.5 text-sm text-slate-700">
-                        <CheckCircle className="h-4 w-4 text-blue-500 flex-shrink-0" /> {f}
-                      </li>
-                    ))}
+                    {['Custom design for your industry & brand', 'Mobile-first, blazing fast, Google-ready',
+                      'WhatsApp & enquiry form integration', 'Delivered in 1–4 weeks, not months'].map(f => (
+                        <li key={f} className="flex items-center gap-2.5 text-sm text-slate-700">
+                          <CheckCircle className="h-4 w-4 text-blue-500 flex-shrink-0" /> {f}
+                        </li>
+                      ))}
                   </ul>
                   <Button asChild className="font-bold bg-gradient-to-r from-blue-600 to-violet-600 hover:opacity-90 transition-all hover:scale-105">
                     <Link to="/web-development">See Portfolio & Pricing <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -535,10 +535,10 @@ export default function Home() {
               {/* Software */}
               <div className="lx-card-hover relative overflow-hidden rounded-3xl border-2 border-violet-100 p-9 bg-gradient-to-br from-violet-50 to-white group">
                 <div className="absolute top-0 right-0 w-60 h-60 rounded-full -translate-y-1/2 translate-x-1/2 opacity-40 pointer-events-none"
-                  style={{ background:'radial-gradient(circle,#ddd6fe,transparent 70%)' }} />
+                  style={{ background: 'radial-gradient(circle,#ddd6fe,transparent 70%)' }} />
                 <div className="relative">
                   <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-violet-200"
-                    style={{ background:'linear-gradient(135deg,#7c3aed,#2563eb)' }}>
+                    style={{ background: 'linear-gradient(135deg,#7c3aed,#2563eb)' }}>
                     <Zap className="h-7 w-7" />
                   </div>
                   <h3 className="text-2xl font-extrabold text-slate-900 mb-3">InvMaster — Invoice Software</h3>
@@ -547,15 +547,15 @@ export default function Home() {
                     and financial reporting for Indian B2B businesses.
                   </p>
                   <ul className="space-y-2.5 mb-8">
-                    {['Generate GST invoices in seconds','Auto-track overdue payments',
-                      'Financial reports at a glance','Built for Indian B2B businesses'].map(f => (
-                      <li key={f} className="flex items-center gap-2.5 text-sm text-slate-700">
-                        <CheckCircle className="h-4 w-4 text-violet-500 flex-shrink-0" /> {f}
-                      </li>
-                    ))}
+                    {['Generate GST invoices in seconds', 'Auto-track overdue payments',
+                      'Financial reports at a glance', 'Built for Indian B2B businesses'].map(f => (
+                        <li key={f} className="flex items-center gap-2.5 text-sm text-slate-700">
+                          <CheckCircle className="h-4 w-4 text-violet-500 flex-shrink-0" /> {f}
+                        </li>
+                      ))}
                   </ul>
                   <Button asChild variant="outline" className="font-bold border-2 border-violet-300 text-violet-700 hover:bg-violet-50 transition-all hover:scale-105 hover:border-violet-500">
-                    <Link to="/software">Learn About InvMaster <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link to="/inv-master">Learn About InvMaster <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>
@@ -569,11 +569,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div ref={ctaRef} className="lx-hidden">
             <div className="relative overflow-hidden rounded-3xl p-10 md:p-16 text-center shadow-2xl"
-              style={{ background:'linear-gradient(135deg,#1d4ed8,#6d28d9)' }}>
+              style={{ background: 'linear-gradient(135deg,#1d4ed8,#6d28d9)' }}>
               <div className="absolute inset-0 opacity-[.07]"
-                style={{ backgroundImage:'radial-gradient(circle at 1px 1px,white 1.5px,transparent 0)', backgroundSize:'28px 28px' }} />
+                style={{ backgroundImage: 'radial-gradient(circle at 1px 1px,white 1.5px,transparent 0)', backgroundSize: '28px 28px' }} />
               <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full opacity-20"
-                style={{ background:'radial-gradient(circle,#60a5fa,transparent)' }} />
+                style={{ background: 'radial-gradient(circle,#60a5fa,transparent)' }} />
               <div className="relative">
                 <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider">
                   <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-white flex-shrink-0" />
@@ -600,7 +600,7 @@ export default function Home() {
                   </a>
                 </div>
                 <p className="text-blue-200 text-sm mt-7">
-                  <Phone className="inline h-3.5 w-3.5 mr-1" />+91 98849 48383 &nbsp;·&nbsp; +91 72001 59832 &nbsp;·&nbsp; Free consultation 
+                  <Phone className="inline h-3.5 w-3.5 mr-1" />+91 98849 48383 &nbsp;·&nbsp; +91 72001 59832 &nbsp;·&nbsp; Free consultation
                 </p>
               </div>
             </div>

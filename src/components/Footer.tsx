@@ -2,16 +2,16 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, MessageCircle, ExternalLink, ArrowRight } from 'lucide-react';
 
 const portfolio = [
-  { name:'Pavithra Travels',       url:'https://pavithratravels.com',     tag:'Travel & Tourism' },
-  { name:'Spectrum Cutting Tools', url:'https://spectrumcuttingtools.com', tag:'Manufacturing' },
-  { name:'JS Engineering',         url:'https://jsenggineering.in',        tag:'Engineering' },
+  { name: 'Pavithra Travels', url: 'https://pavithratravels.com', tag: 'Travel & Tourism' },
+  { name: 'Spectrum Cutting Tools', url: 'https://spectrumcuttingtools.com', tag: 'Manufacturing' },
+  { name: 'JS Engineering', url: 'https://jsenggineering.in', tag: 'Engineering' },
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ background:'#0f172a' }}>
+    <footer style={{ background: '#0f172a' }}>
       {/* Top strip — quick CTA */}
-      <div style={{ background:'linear-gradient(135deg,#1d4ed8,#6d28d9)' }} className="py-8 px-4 sm:px-6 lg:px-8">
+      <div style={{ background: 'linear-gradient(135deg,#1d4ed8,#6d28d9)' }} className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <p className="text-white font-extrabold text-xl mb-1">Ready to get your business online?</p>
@@ -44,17 +44,17 @@ export default function Footer() {
                 />
               </div>
               <span
-              className="text-[17px] font-extrabold"
-              style={{
-                background: 'linear-gradient(135deg,#2563eb,#7c3aed)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}
-            >
-              Lorvix Solutions
-            </span>
+                className="text-[17px] font-extrabold"
+                style={{
+                  background: 'linear-gradient(135deg,#2563eb,#7c3aed)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
+                }}
+              >
+                Lorvix Solutions
+              </span>
             </div>
-            <p className="text-sm leading-relaxed mb-5" style={{ color:'rgba(255,255,255,.55)' }}>
+            <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,.55)' }}>
               Professional website maker in Chennai, Tamil Nadu and the USA. We build fast, SEO-ready websites for businesses that want to grow online.
             </p>
             <div className="flex gap-3">
@@ -73,8 +73,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigation</h3>
             <ul className="space-y-2.5">
-              {[['Home','/'],['Our Portfolio','/web-development'],['InvMaster Software','/software'],['Contact Us','/contact']].map(([l,h]) => (
-                <li key={h}><Link to={h} className="text-sm transition-colors hover:text-white" style={{ color:'rgba(255,255,255,.55)' }}>{l}</Link></li>
+              {[['Home', '/'], ['Our Portfolio', '/web-development'], ['InvMaster Software', '/inv-master'], ['Contact Us', '/contact']].map(([l, h]) => (
+                <li key={h}><Link to={h} className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,.55)' }}>{l}</Link></li>
               ))}
             </ul>
           </div>
@@ -87,11 +87,11 @@ export default function Footer() {
                 <li key={site.url}>
                   <a href={site.url} target="_blank" rel="noopener noreferrer"
                     className="group flex items-start gap-2 transition-colors hover:text-white"
-                    style={{ color:'rgba(255,255,255,.55)' }}>
+                    style={{ color: 'rgba(255,255,255,.55)' }}>
                     <ExternalLink className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-blue-400 group-hover:text-blue-300" />
                     <div>
                       <div className="text-sm font-medium">{site.name}</div>
-                      <div className="text-[11px]" style={{ color:'rgba(255,255,255,.35)' }}>{site.tag}</div>
+                      <div className="text-[11px]" style={{ color: 'rgba(255,255,255,.35)' }}>{site.tag}</div>
                     </div>
                   </a>
                 </li>
@@ -104,16 +104,16 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h3>
             <div className="space-y-3">
               <a href="mailto:lorvixsolutions@gmail.com"
-                className="flex items-start gap-2.5 text-sm transition-colors hover:text-white" style={{ color:'rgba(255,255,255,.55)' }}>
+                className="flex items-start gap-2.5 text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-blue-400" />
                 lorvixsolutions@gmail.com
               </a>
               <a href="tel:+919884948383"
-                className="flex items-start gap-2.5 text-sm transition-colors hover:text-white" style={{ color:'rgba(255,255,255,.55)' }}>
+                className="flex items-start gap-2.5 text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0 text-blue-400" />
                 <div><div>+91 98849 48383</div><div>+91 72001 59832</div></div>
               </a>
-              <div className="flex items-center gap-2.5 text-sm" style={{ color:'rgba(255,255,255,.55)' }}>
+              <div className="flex items-center gap-2.5 text-sm" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <MapPin className="h-4 w-4 flex-shrink-0 text-blue-400" />
                 Chennai, Tamil Nadu, India
               </div>
@@ -121,9 +121,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t flex flex-col sm:flex-row justify-between items-center gap-3 pt-6" style={{ borderColor:'rgba(255,255,255,.1)' }}>
-          <p className="text-xs" style={{ color:'rgba(255,255,255,.35)' }}>© 2025-2026 Lorvix Solutions. All rights reserved.</p>
-          <p className="text-xs" style={{ color:'rgba(255,255,255,.35)' }}>Website maker Chennai · Web development India · Website design USA</p>
+        <div className="border-t flex flex-col sm:flex-row justify-between items-center gap-3 pt-6" style={{ borderColor: 'rgba(255,255,255,.1)' }}>
+          <p className="text-xs" style={{ color: 'rgba(255,255,255,.35)' }}>© 2025-2026 Lorvix Solutions. All rights reserved.</p>
+          <p className="text-xs" style={{ color: 'rgba(255,255,255,.35)' }}>Website maker Chennai · Web development India · Website design USA</p>
         </div>
       </div>
     </footer>

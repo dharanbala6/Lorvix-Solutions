@@ -17,10 +17,10 @@ export default function Header() {
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   const nav = [
-    { label: 'Home',          href: '/' },
+    { label: 'Home', href: '/' },
     { label: 'Our Portfolio', href: '/web-development' },
-    { label: 'Software',      href: '/software' },
-    { label: 'Contact',       href: '/contact' },
+    { label: 'Software', href: '/inv-master' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -63,7 +63,7 @@ export default function Header() {
                 style={{ color: isActive(item.href) ? '#2563eb' : '#64748b' }}>
                 {item.label}
                 {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full" style={{ background:'linear-gradient(90deg,#2563eb,#7c3aed)' }} />
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full" style={{ background: 'linear-gradient(90deg,#2563eb,#7c3aed)' }} />
                 )}
               </Link>
             ))}
@@ -77,7 +77,7 @@ export default function Header() {
             </a>
             <Button asChild size="sm"
               className="font-bold text-sm px-5 shadow-md transition-all hover:scale-105"
-              style={{ background:'linear-gradient(135deg,#2563eb,#7c3aed)', border:'none' }}>
+              style={{ background: 'linear-gradient(135deg,#2563eb,#7c3aed)', border: 'none' }}>
               <Link to="/contact">Get Your Website →</Link>
             </Button>
           </div>
@@ -106,7 +106,7 @@ export default function Header() {
               </a>
               <Link to="/contact"
                 className="flex items-center justify-center font-bold text-white py-3 rounded-xl text-sm transition-all hover:opacity-90"
-                style={{ background:'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
+                style={{ background: 'linear-gradient(135deg,#2563eb,#7c3aed)' }}>
                 Get Your Website →
               </Link>
             </div>

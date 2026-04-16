@@ -68,7 +68,7 @@ const Software = () => {
     setMeta('og:type', 'website', true);
     setMeta('og:image', invmasterDemo, true);
     setMeta('twitter:card', 'summary_large_image');
-    setLink('canonical', 'https://lorvixsolutions.in/inv-master');
+    setLink('canonical', 'https://lorvixsolutions.in/software');
 
     const oldSchema = document.getElementById('invmaster-schema');
     if (oldSchema) oldSchema.remove();

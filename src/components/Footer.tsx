@@ -73,7 +73,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigation</h3>
             <ul className="space-y-2.5">
-              {[['Home', '/'], ['Our Portfolio', '/web-development'], ['InvMaster Software', '/inv-master'], ['Contact Us', '/contact']].map(([l, h]) => (
+              {[['Home', '/'], ['Our Portfolio', '/web-development'], ['InvMaster Software', '/software'], ['Contact Us', '/contact']].map(([l, h]) => (
                 <li key={h}><Link to={h} className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,.55)' }}>{l}</Link></li>
               ))}
             </ul>

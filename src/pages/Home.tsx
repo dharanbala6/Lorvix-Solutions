@@ -555,7 +555,7 @@ export default function Home() {
                       ))}
                   </ul>
                   <Button asChild variant="outline" className="font-bold border-2 border-violet-300 text-violet-700 hover:bg-violet-50 transition-all hover:scale-105 hover:border-violet-500">
-                    <Link to="/inv-master">Learn About InvMaster <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link to="/software">Learn About InvMaster <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>

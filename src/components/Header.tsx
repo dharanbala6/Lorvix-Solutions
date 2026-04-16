@@ -19,7 +19,7 @@ export default function Header() {
   const nav = [
     { label: 'Home', href: '/' },
     { label: 'Our Portfolio', href: '/web-development' },
-    { label: 'Software', href: '/software' },
+    { label: 'Software', href: '/inv-master' },
     { label: 'Contact', href: '/contact' },
   ];
 

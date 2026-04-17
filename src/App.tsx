@@ -8,17 +8,32 @@ import Software from "./pages/inv-master";
 import WebDevelopment from "./pages/WebDevelopment";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { useEffect } from "react"; // Added
+import { useLocation } from "react-router-dom"; // Added
 import ScrollToTop from "@/components/ScrollToTop"; // ✅ Import ScrollToTop
-
+import ReactGA from 'react-ga4';
+ReactGA.initialize('G-4K8GZHM1P9');
 
 const queryClient = new QueryClient();
 
+const GoogleAnalyticsTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
+  return null;
+};
+
 const App = () => (
+
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <GoogleAnalyticsTracker />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />

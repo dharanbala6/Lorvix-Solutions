@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle, ArrowRight, Globe, Smartphone, Zap,
@@ -85,14 +86,6 @@ const process = [
 ];
 
 export default function WebDevelopment() {
-  useEffect(() => {
-    // Update page title & meta for SEO
-    document.title = 'Web Development in Chennai & USA | Website Maker | Lorvix Solutions';
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content',
-      'Lorvix Solutions — professional website maker in Chennai, Tamil Nadu and the USA. We build fast, mobile-first, SEO-ready websites for businesses. See our live portfolio. Free quote available. Call +91 98849 48383.');
-  }, []);
-
   const h1Ref    = useReveal();
   const port1    = useReveal();
   const port2    = useReveal();
@@ -101,9 +94,53 @@ export default function WebDevelopment() {
   const procRef  = useReveal();
   const ctaRef   = useReveal();
 
+  const webDevSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "World-Class Website Development & Digital Transformation",
+      "provider": { "@id": "https://lorvixsolutions.in/#organization" },
+      "description": "High-performance website development services for a global market. We specialize in enterprise-grade web applications, world-class UX design, and scalable digital solutions.",
+      "areaServed": ["Worldwide"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Global Web Solutions",
+        "itemListElement": services.map((s, i) => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": s.title,
+            "description": s.desc
+          }
+        }))
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Global Web Development Portfolio",
+      "numberOfItems": portfolio.length,
+      "itemListElement": portfolio.map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": p.name,
+        "url": p.url,
+        "description": p.desc
+      }))
+    }
+  ];
+
   return (
     <div className="lx-root min-h-screen bg-white">
+      <SEOHead 
+        title="World-Class Website Development | Professional Global Web Agency"
+        description="Lorvix Solutions delivers world-class website development and scalable digital platforms for businesses globally. High-performance design meets precision engineering."
+        canonical="https://lorvixsolutions.in/web-development"
+        keywords="world-class web development, international website design, enterprise web applications, global digital agency, professional web services"
+        schema={webDevSchema}
+      />
       <Header />
+      <main>
 
       {/* ════ HERO ════ */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/60 to-violet-50 pt-24 pb-20">
@@ -114,20 +151,15 @@ export default function WebDevelopment() {
           <div ref={h1Ref} className="lx-hidden max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
               <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
-              Empowering Businesses Using Software Solutions · 3 Live Projects
+              Scalable Digital Solutions
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.08] mb-6 tracking-tight">
-              A Website That{' '}
-              <span className="lx-grad-text">Actually Grows Your Business</span>
+              World-Class <span className="lx-grad-text">Web Engineering</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-500 mb-4 max-w-xl leading-relaxed">
-              We've built websites for travel agencies, manufacturers, and engineering firms across Chennai and India.
-              Each one is live right now — fast, visible on Google, and generating enquiries.
-            </p>
-            <p className="text-sm text-slate-400 mb-8 max-w-xl">
-              Professional web development for businesses in Chennai, Tamil Nadu · Website design services in USA · Affordable website maker for Indian businesses
+            <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[480px] leading-relaxed">
+              We deliver enterprise-grade digital experiences that bridge the gap between imagination and technical reality.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -333,6 +365,7 @@ export default function WebDevelopment() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

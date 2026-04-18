@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import emailjs from "@emailjs/browser";
 import {
   Send,
@@ -112,9 +113,28 @@ const Contact = () => {
     "Ongoing support planning"
   ];
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Lorvix Solutions",
+    "description": "Get a free quote for your website development project in Chennai or the USA. Contact the Lorvix Solutions team via form, email, or WhatsApp.",
+    "url": "https://lorvixsolutions.in/contact",
+    "mainEntity": {
+      "@id": "https://lorvixsolutions.in/#organization"
+    }
+  };
+
   return (
     <div className="lx-root min-h-screen bg-white">
+      <SEOHead 
+        title="Contact Us | Free Website Quote | Lorvix Solutions Chennai & USA"
+        description="Ready to get your business online? Contact Lorvix Solutions for a professional website development quote. 24-hour response time. Based in Chennai, India."
+        canonical="https://lorvixsolutions.in/contact"
+        keywords="contact website maker, hire web developer Chennai, website development quote, Lorvix Solutions contact"
+        schema={contactSchema}
+      />
       <Header />
+      <main>
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
@@ -346,6 +366,7 @@ const Contact = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

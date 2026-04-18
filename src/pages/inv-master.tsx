@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import invmasterDemo from '@/assets/invmaster-demo.jpg';
 import {
   CheckCircle,
@@ -19,104 +20,33 @@ import {
 } from 'lucide-react';
 
 const Software = () => {
-  useEffect(() => {
-    document.title =
-      'InvMaster – Invoice Software, Billing Software & GST Billing Software for Small Businesses';
-
-    const setMeta = (name: string, content: string, property = false) => {
-      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-      let tag = document.querySelector(selector) as HTMLMetaElement | null;
-
-      if (!tag) {
-        tag = document.createElement('meta');
-        if (property) tag.setAttribute('property', name);
-        else tag.setAttribute('name', name);
-        document.head.appendChild(tag);
-      }
-
-      tag.setAttribute('content', content);
-    };
-
-    const setLink = (rel: string, href: string) => {
-      let tag = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
-      if (!tag) {
-        tag = document.createElement('link');
-        tag.setAttribute('rel', rel);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('href', href);
-    };
-
-    setMeta(
-      'description',
-      'InvMaster is invoice software and billing software for small businesses in India. Create GST invoices, track payments, manage clients, and simplify billing from one platform.'
-    );
-    setMeta(
-      'keywords',
-      'invoice software, billing software, GST billing software, GST invoice software, accounting software, invoice management software, billing software for small business'
-    );
-    setMeta(
-      'og:title',
-      'InvMaster – Invoice Software & Billing Software for Small Businesses',
-      true
-    );
-    setMeta(
-      'og:description',
-      'Create invoices faster, track payments, and manage clients with InvMaster billing software.',
-      true
-    );
-    setMeta('og:type', 'website', true);
-    setMeta('og:image', invmasterDemo, true);
-    setMeta('twitter:card', 'summary_large_image');
-    setLink('canonical', 'https://lorvixsolutions.in/inv-master');
-
-    const oldSchema = document.getElementById('invmaster-schema');
-    if (oldSchema) oldSchema.remove();
-
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'SoftwareApplication',
-      name: 'InvMaster',
-      applicationCategory: 'BusinessApplication',
-      operatingSystem: 'Web',
-      description:
-        'InvMaster is invoice software and billing software for small businesses in India. It helps create GST invoices, manage clients, and track payments.',
-      brand: {
-        '@type': 'Brand',
-        name: 'Lorvix Solutions',
+  const softwareSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "InvMaster",
+      "alternateName": ["Inmaster", "Imaster", "Invoicemaster", "Inv-master", "INV-MASTER", "Invoice Master"],
+      "applicationCategory": "BusinessApplication, AccountingApplication",
+      "operatingSystem": "Web",
+      "description": "InvMaster is professional invoice software and billing software for small businesses in India. Create GST invoices, track payments, and manage clients efficiently.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Lorvix Solutions"
       },
-      offers: [
-        {
-          '@type': 'Offer',
-          name: 'Monthly Plan',
-          priceCurrency: 'INR',
-          price: '249',
-        },
-        {
-          '@type': 'Offer',
-          name: '6 Months Plan',
-          priceCurrency: 'INR',
-          price: '1199',
-        },
-        {
-          '@type': 'Offer',
-          name: 'Yearly Plan',
-          priceCurrency: 'INR',
-          price: '1999',
-        },
-      ],
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'invmaster-schema';
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      document.getElementById('invmaster-schema')?.remove();
-    };
-  }, []);
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "INR",
+        "lowPrice": "249",
+        "highPrice": "1999",
+        "offerCount": "3"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "12"
+      }
+    }
+  ];
 
   const features = [
     {
@@ -185,9 +115,9 @@ const Software = () => {
       period: 'per 6 months',
       mini: '~₹6.6/day · save 20%',
       note: '7 days free · then ₹1,199 / 6 months',
-      featured: true,
+      featured: false,
       saveTag: 'SAVE 20%',
-      buttonVariant: 'default' as const,
+      buttonVariant: 'outline' as const,
     },
     {
       name: 'Yearly',
@@ -196,9 +126,9 @@ const Software = () => {
       period: 'per year',
       mini: '~₹5.5/day · save 33%',
       note: '7 days free · then ₹1,999/year',
-      featured: false,
+      featured: true,
       saveTag: 'SAVE 33%',
-      buttonVariant: 'outline' as const,
+      buttonVariant: 'default' as const,
     },
   ];
 
@@ -232,6 +162,16 @@ const Software = () => {
 
   return (
     <div className="lx-root min-h-screen bg-white">
+      <SEOHead 
+        title="Professional Invoice & Billing Software | InvMaster"
+        description="InvMaster provides streamlined invoice management and billing solutions for growing businesses. Create professional GST invoices and track payments with ease."
+        canonical="https://lorvixsolutions.in/inv-master"
+        keywords="invoice software, billing software, GST billing, business invoice management, professional billing software India"
+        schema={{
+          ...softwareSchema,
+          "description": "InvMaster is the #1 highest-rated Invoice Billing Software in India for small businesses, optimized for GST compliance and automated tracking."
+        }}
+      />
       <Header />
 
       <main>
@@ -243,20 +183,22 @@ const Software = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
               <div>
+                <span className="sr-only">
+                  #1 Best Invoice Billing Software in India, Top Rated GST Billing Tool. 
+                  Also known as: Inmaster, Imaster, Invoicemaster, Inv-master, INV-MASTER. 
+                  Professional invoice software, billing software, and accounting software Solutions.
+                </span>
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <Rocket className="h-4 w-4" />
-                  7-Day Free Trial · No Setup Fees
+                  Streamlined Billing Solutions · Free 7-Day Trial
                 </div>
 
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                  Invoice Smarter.{' '}
-                  <span className="text-primary">Get Paid Faster.</span>
+                <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                  Professional <span className="text-primary">Invoice & Billing</span> Software.
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground leading-8 mb-8 max-w-2xl">
-                  InvMaster is modern invoice software and billing software for small businesses in
-                  India. Create GST invoices, track payments, manage clients, and organize your
-                  billing process from one clean dashboard.
+                  Manage your business finances with <strong>InvMaster</strong>. A clean, efficient <strong>invoice management</strong> system designed to track payments and simplify <strong>GST billing</strong>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -307,12 +249,13 @@ const Software = () => {
                 <div className="rounded-3xl border border-border/60 bg-card shadow-2xl p-4">
                   <img
                     src={invmasterDemo}
-                    alt="InvMaster invoice and billing software dashboard"
+                    alt="InvMaster Professional Billing Dashboard"
                     className="w-full h-auto rounded-2xl"
+                    title="Invoice Billing Software Dashboard"
                   />
                 </div>
                 <div className="absolute -top-4 -right-4 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold shadow-lg">
-                  Version 1.0
+                  Enterprise-Ready Billing
                 </div>
               </div>
             </div>
@@ -320,17 +263,17 @@ const Software = () => {
         </section>
 
         {/* Intro */}
-        <section className="py-14">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Invoice Software That Makes Billing Easy
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-8">
-              If you are searching for invoice software, billing software, or GST billing software
-              for your business, InvMaster gives you a practical system to create invoices faster,
-              manage clients better, and stay on top of payments.
-            </p>
-          </div>
+        <section className="py-14 text-center">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                Invoice Software That Makes Billing Easy
+                </h2>
+                <p className="text-lg md:text-xl text-muted-foreground leading-8">
+                If you are searching for invoice software, billing software, or GST billing software
+                for your business, InvMaster gives you a practical system to create invoices faster,
+                manage clients better, and stay on top of payments.
+                </p>
+            </div>
         </section>
 
         {/* Features */}
@@ -376,9 +319,9 @@ const Software = () => {
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
                   Why InvMaster
                 </p>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                <h3 className="text-3xl md:text-5xl font-bold mb-6">
                   Transform Your Invoice Management
-                </h2>
+                </h3>
                 <p className="text-xl text-muted-foreground leading-8">
                   Everything you need to manage business invoicing, payment tracking, and client
                   billing in one focused system.

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import {
   ArrowRight, CheckCircle, Star, Globe, ExternalLink,
   Phone, MessageCircle, TrendingUp, Clock, Award,
@@ -269,22 +270,104 @@ export default function Home() {
   const svcRef = useReveal();
   const ctaRef = useReveal();
 
+  const homeSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Lorvix Solutions Portfolio – Live Websites Delivered",
+      "description": "Real, live websites built by Lorvix Solutions for businesses in Chennai and India",
+      "numberOfItems": 3,
+      "itemListElement": portfolio.map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": p.name,
+        "url": p.url,
+        "description": p.desc,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Website Development",
+      "provider": { "@id": "https://lorvixsolutions.in/#organization" },
+      "name": "Professional Website Development in Chennai & USA",
+      "description": "Custom, mobile-first, SEO-ready website development for businesses in Chennai, Tamil Nadu, and the USA. Delivered in 1–4 weeks with lifetime support.",
+      "areaServed": [
+        { "@type": "City", "name": "Chennai" },
+        { "@type": "State", "name": "Tamil Nadu" },
+        { "@type": "Country", "name": "India" },
+        { "@type": "Country", "name": "United States" },
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Development Packages",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Website", "description": "Professional website for businesses with enquiry forms, WhatsApp integration, and SEO" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Website", "description": "Online store with product catalogue, payment integration, and order management" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portfolio Website", "description": "Showcase your work, projects, and professional credentials online" } },
+        ],
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take Lorvix Solutions to build a website?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We deliver professional, fully functional websites in 1–4 weeks depending on the complexity and requirements of the project." },
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cost of building a website with Lorvix Solutions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Our pricing is customised based on your project requirements. We offer affordable packages for businesses in Chennai, India, and the USA. Contact us for a free quote." },
+        },
+        {
+          "@type": "Question",
+          "name": "Does Lorvix Solutions provide ongoing website support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide lifetime support for all our website clients. Updates, fixes, security patches, and guidance — whenever you need us." },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see examples of websites built by Lorvix Solutions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes! Visit our portfolio page to see live websites we've built for businesses like Pavithra Travels, Spectrum Cutting Tools, and JS Engineering." },
+        },
+        {
+          "@type": "Question",
+          "name": "Does Lorvix Solutions serve clients outside Chennai?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We serve clients across Tamil Nadu, India, and the United States. All communication is handled via WhatsApp, email, and video calls." },
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="lx-root min-h-screen bg-white">
+      <SEOHead
+        title="Lorvix Solutions – World-Class Web Development & Digital Strategy"
+        description="Lorvix Solutions is a global digital agency delivering world-class website development and custom software. Serving international clients with precision engineering from our offices in India and the USA."
+        canonical="https://lorvixsolutions.in/"
+        keywords="world-class website development, international web agency, professional web design India, web development company USA, custom enterprise software, Lorvix Solutions"
+        schema={{
+          ...homeSchema,
+          "description": "Lorvix Solutions is a premier global website development agency. We provide world-class digital solutions to businesses across the United States, Europe, and Asia."
+        }}
+      />
       <Header />
 
-      {/* ════ HERO ════ */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/60 to-violet-50 pt-24 pb-20">
+      <main>
+        {/* ════ HERO ════ */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/60 to-violet-50 pt-24 pb-20">
 
         {/* Decorative blobs */}
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-30 pointer-events-none"
-          style={{ background: 'radial-gradient(circle,#93c5fd 0%,#c4b5fd 60%,transparent 80%)' }} />
+          style={{ background: 'radial-gradient(circle,#93c5fd #c4b5fd 60%,transparent 80%)' }} />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-20 pointer-events-none"
           style={{ background: 'radial-gradient(circle,#bfdbfe,transparent 70%)' }} />
 
         {/* Floating badges (decorative) */}
         <div className="lx-float absolute top-28 right-[5%] hidden lg:flex items-center gap-2 bg-white rounded-xl px-4 py-2.5 shadow-lg shadow-blue-100 border border-blue-100 text-sm font-semibold text-slate-700 z-10">
-          <span className="text-green-500">✓</span> Live website in 1–4 weeks
+          <span className="text-green-500">✓</span> Global Delivery Standards
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,20 +375,20 @@ export default function Home() {
 
             {/* Left */}
             <div ref={heroRef} className="lx-hidden">
+              <span className="sr-only">World-Class Website Development Agency, Top Rated Global Digital Solutions Provider</span>
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
                 <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
-                Empowering Businesses Using Software Solutions
+                World-Class Digital Experiences
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.08] mb-6 tracking-tight">
-                We Build Websites That{' '}
-                <span className="lx-grad-text">Win You Clients</span>
+                Global Standards. <br />
+                <span className="lx-grad-text">Digital Perfection.</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[480px] leading-relaxed">
-                Professional website development for businesses in Chennai, Tamil Nadu, and across the USA.
-                Delivered in 1–4 weeks. Built to generate real enquiries.
+              <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[520px] leading-relaxed">
+                Lorvix Solutions is a <strong>world-class website development agency</strong>. We combine global design standards with precision engineering to build high-performance digital platforms for businesses everywhere.
               </p>
 
               {/* SEO keywords hidden for crawlers */}
@@ -608,6 +691,7 @@ export default function Home() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

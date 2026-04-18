@@ -166,7 +166,7 @@ const Software = () => {
         title="Professional Invoice & Billing Software | InvMaster"
         description="InvMaster provides streamlined invoice management and billing solutions for growing businesses. Create professional GST invoices and track payments with ease."
         canonical="https://lorvixsolutions.in/inv-master"
-        keywords="invoice software, billing software, GST billing, business invoice management, professional billing software India"
+        keywords="affordable invoice software, budget-friendly billing software, GST billing, business invoice management, professional billing software India, cost-effective accounting tool"
         schema={{
           ...softwareSchema,
           "description": "InvMaster is the #1 highest-rated Invoice Billing Software in India for small businesses, optimized for GST compliance and automated tracking."
@@ -198,7 +198,7 @@ const Software = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground leading-8 mb-8 max-w-2xl">
-                  Manage your business finances with <strong>InvMaster</strong>. A clean, efficient <strong>invoice management</strong> system designed to track payments and simplify <strong>GST billing</strong>.
+                  Manage your business finances with <strong>InvMaster</strong>. An <strong>affordable and cost-effective invoice management</strong> system designed to track payments and simplify <strong>GST billing</strong>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">

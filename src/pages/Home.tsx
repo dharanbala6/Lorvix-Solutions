@@ -347,10 +347,10 @@ export default function Home() {
         title="Lorvix Solutions – World-Class Web Development & Digital Strategy"
         description="Lorvix Solutions is a global digital agency delivering world-class website development and custom software. Serving international clients with precision engineering from our offices in India and the USA."
         canonical="https://lorvixsolutions.in/"
-        keywords="world-class website development, international web agency, professional web design India, web development company USA, custom enterprise software, Lorvix Solutions"
+        keywords="affordable website maker, affordable web development, cost-effective website design, world-class website development, international web agency, professional web design India, web development company USA, custom enterprise software, Lorvix Solutions"
         schema={{
           ...homeSchema,
-          "description": "Lorvix Solutions is a premier global website development agency. We provide world-class digital solutions to businesses across the United States, Europe, and Asia."
+          "description": "Lorvix Solutions is a premier global website development agency. We provide world-class and affordable digital solutions to businesses across the United States, Europe, and Asia."
         }}
       />
       <Header />
@@ -388,7 +388,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[520px] leading-relaxed">
-                Lorvix Solutions is a <strong>world-class website development agency</strong>. We combine global design standards with precision engineering to build high-performance digital platforms for businesses everywhere.
+                Lorvix Solutions is a <strong>world-class and affordable website development agency</strong>. We combine global design standards with <strong>cost-effective engineering</strong> to build high-performance digital platforms for businesses everywhere.
               </p>
 
               {/* SEO keywords hidden for crawlers */}
@@ -598,8 +598,8 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Website Development</h3>
                   <p className="text-slate-500 mb-6 leading-relaxed">
-                    Professional website design and development for businesses in Chennai, Tamil Nadu, and the USA.
-                    Travel agencies, manufacturers, engineering firms — every industry, built to convert.
+                    <strong>Affordable website design</strong> and professional development for businesses in Chennai, Tamil Nadu, and the USA.
+                    Travel agencies, manufacturers, engineering firms — every industry, built to convert at the <strong>best value</strong>.
                   </p>
                   <ul className="space-y-2.5 mb-8">
                     {['Custom design for your industry & brand', 'Mobile-first, blazing fast, Google-ready',

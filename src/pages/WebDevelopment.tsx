@@ -79,7 +79,7 @@ const services = [
 ];
 
 const process = [
-  { step:'01', title:'Free Consultation',   desc:'We learn your business goals, industry, and what you need from your website. No cost, no pressure.' },
+  { step:'01', title:'Free Consultation',   desc:'We learn your business goals, industry, and budget. Our goal is to provide an affordable solution that fits your needs.' },
   { step:'02', title:'Design & Approval',   desc:'We design your website and share it for your feedback before writing a single line of code.' },
   { step:'03', title:'Build & Test',        desc:'Clean development, tested on all devices, fully QA-checked — ready to impress on day one.' },
   { step:'04', title:'Launch & Support',    desc:"We go live and stay with you. Changes, updates, issues — we handle it. That's the Lorvix promise." },
@@ -136,7 +136,7 @@ export default function WebDevelopment() {
         title="World-Class Website Development | Professional Global Web Agency"
         description="Lorvix Solutions delivers world-class website development and scalable digital platforms for businesses globally. High-performance design meets precision engineering."
         canonical="https://lorvixsolutions.in/web-development"
-        keywords="world-class web development, international website design, enterprise web applications, global digital agency, professional web services"
+        keywords="affordable web development, budget-friendly website design, cost-effective web agency, world-class web development, international website design, enterprise web applications, global digital agency, professional web services"
         schema={webDevSchema}
       />
       <Header />
@@ -159,7 +159,7 @@ export default function WebDevelopment() {
             </h1>
 
             <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[480px] leading-relaxed">
-              We deliver enterprise-grade digital experiences that bridge the gap between imagination and technical reality.
+              We deliver <strong>affordable, enterprise-grade digital experiences</strong> that bridge the gap between imagination and technical reality.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">

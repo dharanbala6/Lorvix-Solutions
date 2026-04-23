@@ -624,14 +624,14 @@ export default function Home() {
                     style={{ background: 'linear-gradient(135deg,#7c3aed,#2563eb)' }}>
                     <Zap className="h-7 w-7" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3">InvMaster — Invoice Software</h3>
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3">InvMaster V2 — Invoicing & Accounting</h3>
                   <p className="text-slate-500 mb-6 leading-relaxed">
-                    Stop chasing payments and drowning in paperwork. InvMaster automates invoicing, payment tracking,
-                    and financial reporting for Indian B2B businesses.
+                    The complete billing and accounting system. InvMaster V2 automates invoicing, tracks expenses, 
+                    calculates tax liability, and monitors profit & loss for your business.
                   </p>
                   <ul className="space-y-2.5 mb-8">
-                    {['Generate GST invoices in seconds', 'Auto-track overdue payments',
-                      'Financial reports at a glance', 'Built for Indian B2B businesses'].map(f => (
+                    {['GST invoicing & expense tracking', 'Profit & Loss (P&L) monitoring',
+                      'Tax liability & vendor dues', 'Built for Indian B2B businesses'].map(f => (
                         <li key={f} className="flex items-center gap-2.5 text-sm text-slate-700">
                           <CheckCircle className="h-4 w-4 text-violet-500 flex-shrink-0" /> {f}
                         </li>

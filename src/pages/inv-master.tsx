@@ -17,6 +17,10 @@ import {
   FileSpreadsheet,
   Rocket,
   IndianRupee,
+  Wallet,
+  Calculator,
+  TrendingUp,
+  ArrowUpCircle,
 } from 'lucide-react';
 
 const Software = () => {
@@ -24,11 +28,11 @@ const Software = () => {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "InvMaster",
-      "alternateName": ["Inmaster", "Imaster", "Invoicemaster", "Inv-master", "INV-MASTER", "Invoice Master"],
-      "applicationCategory": "BusinessApplication, AccountingApplication",
+      "name": "InvMaster V2",
+      "alternateName": ["InvMaster", "Inmaster", "Imaster", "Invoicemaster", "Inv-master", "INV-MASTER", "Invoice Master", "InvMaster accounting software"],
+      "applicationCategory": "BusinessApplication, AccountingApplication, FinancialApplication",
       "operatingSystem": "Web",
-      "description": "InvMaster is professional invoice software and billing software for small businesses in India. Create GST invoices, track payments, and manage clients efficiently.",
+      "description": "InvMaster V2 is professional invoice software and billing software for small businesses in India. Create GST invoices, track expenses, monitor profit & loss, and calculate tax liability efficiently.",
       "brand": {
         "@type": "Brand",
         "name": "Lorvix Solutions"
@@ -36,8 +40,8 @@ const Software = () => {
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
-        "lowPrice": "249",
-        "highPrice": "1999",
+        "lowPrice": "299",
+        "highPrice": "2499",
         "offerCount": "3"
       },
       "aggregateRating": {
@@ -85,6 +89,30 @@ const Software = () => {
       description:
         'Designed for Indian businesses that need reliable GST billing, clean workflows, and easy access.',
     },
+    {
+      icon: <Wallet className="h-6 w-6" />,
+      title: 'Expense Tracking',
+      description:
+        'Monitor your business spending with ease. Categorize expenses and keep your cash flow in check.',
+    },
+    {
+      icon: <Calculator className="h-6 w-6" />,
+      title: 'Tax Liability Calculation',
+      description:
+        'Automatically calculate your GST and tax liabilities so you are always ready for filing.',
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6" />,
+      title: 'Business Accounting',
+      description:
+        'Monitor Profit & Loss by comparing sales and expenses. Get a clear view of your business financial health.',
+    },
+    {
+      icon: <ArrowUpCircle className="h-6 w-6" />,
+      title: 'Vendor Balance Tracking',
+      description:
+        'Track outward payments and remaining dues to vendors and suppliers for better financial transparency.',
+    },
   ];
 
   const benefits = [
@@ -92,6 +120,8 @@ const Software = () => {
     'Avoid manual calculation and billing errors',
     'Track payment dues and customer balances clearly',
     'Create GST-ready invoices for Indian businesses',
+    'New in V2: Complete Profit & Loss (P&L) tracking',
+    'New in V2: Expense management & tax calculations',
     'Access invoice and billing data from anywhere',
     'Export monthly sales and business data easily',
   ];
@@ -100,10 +130,10 @@ const Software = () => {
     {
       name: 'Monthly',
       subtitle: 'Flexible, month-by-month',
-      price: '249',
+      price: '299',
       period: 'per month',
-      mini: '~₹8/day — less than a cup of chai',
-      note: '7 days free · then ₹249/month',
+      mini: '~₹10/day — less than a cup of chai',
+      note: '7 days free · then ₹299/month',
       featured: false,
       saveTag: '',
       buttonVariant: 'outline' as const,
@@ -111,23 +141,23 @@ const Software = () => {
     {
       name: '6 Months',
       subtitle: 'Best value for growing businesses',
-      price: '1,199',
+      price: '1,499',
       period: 'per 6 months',
-      mini: '~₹6.6/day · save 20%',
-      note: '7 days free · then ₹1,199 / 6 months',
+      mini: '~₹8.3/day · save 16%',
+      note: '7 days free · then ₹1,499 / 6 months',
       featured: false,
-      saveTag: 'SAVE 20%',
+      saveTag: 'SAVE 16%',
       buttonVariant: 'outline' as const,
     },
     {
       name: 'Yearly',
       subtitle: 'Maximum savings, maximum value',
-      price: '1,999',
+      price: '2,499',
       period: 'per year',
-      mini: '~₹5.5/day · save 33%',
-      note: '7 days free · then ₹1,999/year',
+      mini: '~₹6.8/day · save 30%',
+      note: '7 days free · then ₹2,499/year',
       featured: true,
-      saveTag: 'SAVE 33%',
+      saveTag: 'SAVE 30%',
       buttonVariant: 'default' as const,
     },
   ];
@@ -138,38 +168,44 @@ const Software = () => {
     'Payment due tracking',
     'Financial reports & analytics',
     'Monthly Excel exports',
+    'New: Expense & Tax tracking',
+    'New: P&L & Vendor dues',
     'Free updates & new features',
   ];
 
   const faqItems = [
     {
-      q: 'What is InvMaster?',
-      a: 'InvMaster is invoice software and billing software built for small businesses that want faster invoicing, better client management, and easier payment tracking.',
+      q: 'What is InvMaster V2?',
+      a: 'InvMaster V2 is a comprehensive invoice and accounting software built for small businesses. It combines fast invoicing, expense tracking, profit & loss (P&L) monitoring, and tax liability calculations into one easy-to-use platform.',
     },
     {
-      q: 'Is InvMaster suitable for GST billing?',
-      a: 'Yes. InvMaster is designed for Indian businesses and supports GST invoice creation and structured billing workflows.',
+      q: 'Does InvMaster V2 support GST billing and tax calculations?',
+      a: 'Yes. InvMaster V2 is optimized for Indian businesses. You can create GST-compliant invoices and automatically calculate your GST tax liability based on sales and expenses.',
     },
     {
-      q: 'Can I track unpaid invoices and dues?',
-      a: 'Yes. You can monitor pending and overdue invoices so it becomes easier to follow up and manage collections.',
+      q: 'Can I track business profit and loss (P&L)?',
+      a: 'Absolutely. InvMaster V2 features a built-in accounting module that compares your sales and expenses to provide a clear view of your business profit or loss and overall financial health.',
     },
     {
-      q: 'Who should use this software?',
-      a: 'InvMaster is ideal for service providers, small business owners, agencies, traders, and growing companies that need clean invoice and billing management.',
+      q: 'How does expense and vendor tracking work?',
+      a: 'You can record all your business expenses and track outward payments to vendors. The system also monitors remaining dues so you never miss a payment and keep your accounts accurate.',
+    },
+    {
+      q: 'Who is InvMaster V2 ideal for?',
+      a: 'InvMaster V2 is perfect for service providers, small business owners, agencies, traders, and entrepreneurs who need a professional but affordable way to manage billing, expenses, and business accounting.',
     },
   ];
 
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead 
-        title="Professional Invoice & Billing Software | InvMaster"
-        description="InvMaster provides streamlined invoice management and billing solutions for growing businesses. Create professional GST invoices and track payments with ease."
+        title="Professional Invoice, Expense & Billing Software | InvMaster V2"
+        description="InvMaster V2 provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease."
         canonical="https://lorvixsolutions.in/inv-master"
-        keywords="affordable invoice software, budget-friendly billing software, GST billing, business invoice management, professional billing software India, cost-effective accounting tool"
+        keywords="InvMaster V2, affordable invoice software, budget-friendly billing software, GST billing software, business accounting tool, profit loss tracking software, expense management India, tax liability calculator, professional billing software India, cost-effective accounting system"
         schema={{
           ...softwareSchema,
-          "description": "InvMaster is the #1 highest-rated Invoice Billing Software in India for small businesses, optimized for GST compliance and automated tracking."
+          "description": "InvMaster V2 is the #1 highest-rated Invoice, Expense & Billing Software in India, optimized for GST compliance, tax calculation, and automated tracking."
         }}
       />
       <Header />
@@ -194,11 +230,11 @@ const Software = () => {
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
-                  Professional <span className="text-primary">Invoice & Billing</span> Software.
+                  Professional <span className="text-primary">Invoice, Expense & Billing</span>.
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground leading-8 mb-8 max-w-2xl">
-                  Manage your business finances with <strong>InvMaster</strong>. An <strong>affordable and cost-effective invoice management</strong> system designed to track payments and simplify <strong>GST billing</strong>.
+                  Manage your business finances with <strong>InvMaster V2</strong>. An <strong>affordable invoice, expense, and P&L management</strong> system designed to simplify <strong>GST billing and tax liability</strong>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -236,7 +272,7 @@ const Software = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    From ₹249/month
+                    From ₹299/month
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />

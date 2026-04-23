@@ -28,7 +28,7 @@ const Software = () => {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "InvMaster V2",
+      "name": "InvMaster",
       "alternateName": ["InvMaster", "Inmaster", "Imaster", "Invoicemaster", "Inv-master", "INV-MASTER", "Invoice Master", "InvMaster accounting software"],
       "applicationCategory": "BusinessApplication, AccountingApplication, FinancialApplication",
       "operatingSystem": "Web",
@@ -198,7 +198,7 @@ const Software = () => {
 
   return (
     <div className="lx-root min-h-screen bg-white">
-      <SEOHead 
+      <SEOHead
         title="Professional Invoice, Expense & Billing Software | InvMaster V2"
         description="InvMaster V2 provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease."
         canonical="https://lorvixsolutions.in/inv-master"
@@ -220,8 +220,8 @@ const Software = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
               <div>
                 <span className="sr-only">
-                  #1 Best Invoice Billing Software in India, Top Rated GST Billing Tool. 
-                  Also known as: Inmaster, Imaster, Invoicemaster, Inv-master, INV-MASTER. 
+                  #1 Best Invoice Billing Software in India, Top Rated GST Billing Tool.
+                  Also known as: Inmaster, Imaster, Invoicemaster, Inv-master, INV-MASTER.
                   Professional invoice software, billing software, and accounting software Solutions.
                 </span>
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
@@ -300,16 +300,16 @@ const Software = () => {
 
         {/* Intro */}
         <section className="py-14 text-center">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Invoice Software That Makes Billing Easy
-                </h2>
-                <p className="text-lg md:text-xl text-muted-foreground leading-8">
-                If you are searching for invoice software, billing software, or GST billing software
-                for your business, InvMaster gives you a practical system to create invoices faster,
-                manage clients better, and stay on top of payments.
-                </p>
-            </div>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Invoice Software That Makes Billing Easy
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-8">
+              If you are searching for invoice software, billing software, or GST billing software
+              for your business, InvMaster gives you a practical system to create invoices faster,
+              manage clients better, and stay on top of payments.
+            </p>
+          </div>
         </section>
 
         {/* Features */}

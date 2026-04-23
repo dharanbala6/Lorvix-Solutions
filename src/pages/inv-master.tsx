@@ -32,7 +32,7 @@ const Software = () => {
       "alternateName": ["InvMaster", "Inmaster", "Imaster", "Invoicemaster", "Inv-master", "INV-MASTER", "Invoice Master", "InvMaster accounting software"],
       "applicationCategory": "BusinessApplication, AccountingApplication, FinancialApplication",
       "operatingSystem": "Web",
-      "description": "InvMaster V2 is professional invoice software and billing software for small businesses in India. Create GST invoices, track expenses, monitor profit & loss, and calculate tax liability efficiently.",
+      "description": "InvMaster is professional invoice software and billing software for small businesses in India. Create GST invoices, track expenses, monitor profit & loss, and calculate tax liability efficiently.",
       "brand": {
         "@type": "Brand",
         "name": "Lorvix Solutions"

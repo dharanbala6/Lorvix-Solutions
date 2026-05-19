@@ -87,15 +87,14 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="h-5 w-5" />,
-      label: "Email",
-      value: "lorvixsolutions@gmail.com",
-      link: "mailto:lorvixsolutions@gmail.com"
+      label: "Fastest Response",
+      value: "Submit the form above for your Chennai website quote",
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
       value: "+91 98849 48383, +91 72001 59832",
-      link: "tel:+15551234567"
+      link: "tel:+919884948383"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
@@ -117,7 +116,7 @@ const Contact = () => {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Lorvix Solutions",
-    "description": "Get a free quote for your website development project in Chennai or the USA. Contact the Lorvix Solutions team via form, email, or WhatsApp.",
+    "description": "Get a free quote for your website development project in Chennai or the USA. Submit the form for the fastest response.",
     "url": "https://lorvixsolutions.in/contact",
     "mainEntity": {
       "@id": "https://lorvixsolutions.in/#organization"
@@ -127,10 +126,10 @@ const Contact = () => {
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead 
-        title="Contact Us | Free Website Quote | Lorvix Solutions Chennai & USA"
-        description="Ready to get your business online? Contact Lorvix Solutions for a professional website development quote. 24-hour response time. Based in Chennai, India."
+        title="Chennai Website Quote | Contact Lorvix Solutions | Fast EmailJS Response"
+        description="Submit your project requirements and get a Chennai website quote within 24 hours. Our EmailJS-powered contact form delivers fast, low-friction responses."
         canonical="https://lorvixsolutions.in/contact"
-        keywords="contact website maker, hire web developer Chennai, website development quote, Lorvix Solutions contact"
+        keywords="Chennai website quote, website design Chennai, emailjs contact form, hire web developer Chennai, web development quote Chennai"
         schema={contactSchema}
       />
       <Header />
@@ -140,11 +139,10 @@ const Contact = () => {
       <section className="py-20 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Get Your Business <span className="bg-gradient-primary bg-clip-text text-transparent">Online</span>
+            Get Your Business <span className="bg-gradient-primary bg-clip-text text-transparent">Online in Chennai</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with a professional website?
-            Fill out the form below and our team will create a custom proposal for your project.
+            Submit your project requirements through our EmailJS-powered form for the fastest quote. We respond quickly and help Chennai businesses launch websites fast.
           </p>
         </div>
       </section>
@@ -243,7 +241,7 @@ const Contact = () => {
                       "Sending..."
                     ) : (
                       <>
-                        Send Project Details
+                        Submit for Fast Quote
                         <Send className="ml-2 h-5 w-5" />
                       </>
                     )}
@@ -274,12 +272,16 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">{info.label}</div>
-                        <a
-                          href={info.link}
-                          className="font-medium text-foreground hover:text-primary transition-colors"
-                        >
-                          {info.value}
-                        </a>
+                        {info.link ? (
+                          <a
+                            href={info.link}
+                            className="font-medium text-foreground hover:text-primary transition-colors"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <span className="font-medium text-foreground">{info.value}</span>
+                        )}
                       </div>
                     </div>
                   ))}

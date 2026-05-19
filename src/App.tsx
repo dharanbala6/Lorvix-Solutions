@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Software from "./pages/inv-master";
 import WebDevelopment from "./pages/WebDevelopment";
+import {
+  BusinessWebsiteDesignChennai,
+  WebDesignCompanyChennai,
+  WebsiteDesignCostChennai,
+} from "./pages/SEOLandingPages";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react"; // Added
@@ -38,6 +43,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/web-design-company-chennai" element={<WebDesignCompanyChennai />} />
+          <Route path="/website-design-cost-chennai" element={<WebsiteDesignCostChennai />} />
+          <Route path="/business-website-design-chennai" element={<BusinessWebsiteDesignChennai />} />
           <Route path="/inv-master" element={<Software />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

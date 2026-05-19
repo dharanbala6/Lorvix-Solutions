@@ -12,6 +12,7 @@ import {
 import ptlogo from '../assets/pt.png';
 import sclogo from '../assets/sc.png';
 import jslogo from '../assets/js.png';
+import webPortfolioImage from '../assets/web-portfolio.jpg';
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -133,10 +134,10 @@ export default function WebDevelopment() {
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead 
-        title="World-Class Website Development | Professional Global Web Agency"
-        description="Lorvix Solutions delivers world-class website development and scalable digital platforms for businesses globally. High-performance design meets precision engineering."
+        title="Web Design Company in Chennai | Website Development Services"
+        description="Lorvix Solutions is a Chennai web design and website development company serving India, USA, and worldwide clients with fast, SEO-ready websites and live portfolio proof."
         canonical="https://lorvixsolutions.in/web-development"
-        keywords="affordable web development, budget-friendly website design, cost-effective web agency, world-class web development, international website design, enterprise web applications, global digital agency, professional web services"
+        keywords="web design company in Chennai, web development company in Chennai, website designers in Chennai, website development services Chennai, ecommerce website design Chennai, affordable web design services Chennai, corporate website design company Chennai, mobile responsive web design Chennai"
         schema={webDevSchema}
       />
       <Header />
@@ -147,7 +148,8 @@ export default function WebDevelopment() {
         <div className="absolute -top-40 -right-40 w-[580px] h-[580px] rounded-full opacity-25 pointer-events-none"
           style={{ background:'radial-gradient(circle,#93c5fd,#c4b5fd 60%,transparent 80%)' }} />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.85fr)] gap-12 items-center">
           <div ref={h1Ref} className="lx-hidden max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
               <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
@@ -178,6 +180,51 @@ export default function WebDevelopment() {
                 <span key={t} className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-emerald-500" /> {t}
                 </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden lg:block">
+            <div className="relative">
+              <div className="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-blue-200/70 via-white to-violet-200/70 blur-2xl opacity-80" />
+              <div className="relative overflow-hidden rounded-3xl border border-white/80 bg-white shadow-2xl shadow-blue-200/50">
+                <img
+                  src={webPortfolioImage}
+                  alt="Lorvix Solutions website portfolio preview"
+                  className="h-[420px] w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-slate-50" aria-label="Website service guides">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-8 items-start">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[.15em] text-blue-600 mb-3">Plan your website</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                Helpful guides for Chennai businesses
+              </h2>
+              <p className="text-slate-500 leading-relaxed">
+                If you are comparing agencies, planning a budget, or checking whether your industry needs a specific website structure, these pages give Chennai and worldwide clients a clearer starting point.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                ['Web Design Chennai', '/web-design-company-chennai', 'How we build credible websites for local business enquiries.'],
+                ['Website Cost', '/website-design-cost-chennai', 'What affects pricing, packages, redesigns, and e-commerce scope.'],
+                ['Business Websites', '/business-website-design-chennai', 'Website structures for travel, manufacturing, clinics, retail, and more.'],
+              ].map(([title, href, text]) => (
+                <Link key={href} to={href} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-md shadow-slate-100 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-100">
+                  <h3 className="text-lg font-extrabold text-slate-900 mb-2">{title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed mb-4">{text}</p>
+                  <span className="inline-flex items-center text-sm font-bold text-blue-600">
+                    Read guide <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

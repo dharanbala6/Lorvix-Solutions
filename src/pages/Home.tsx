@@ -390,7 +390,7 @@ export default function Home() {
                 <p className="text-[10px] font-bold uppercase tracking-[.15em] text-slate-400 mb-4">Our Track Record</p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon: <Globe className="h-5 w-5" />, label: 'Websites Delivered', value: '50+' },
+                    { icon: <Globe className="h-5 w-5" />, label: 'Websites Delivered', value: '5+' },
                     { icon: <Star className="h-5 w-5" />, label: 'Client Satisfaction', value: '98%' },
                     { icon: <Clock className="h-5 w-5" />, label: 'Average Support Response', value: '2h' },
                     { icon: <Zap className="h-5 w-5" />, label: 'Weeks to Launch', value: '1–4wk' },

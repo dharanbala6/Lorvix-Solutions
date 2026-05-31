@@ -5,14 +5,7 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
@@ -29,9 +22,9 @@ export default function Header() {
     <header
       className="sticky top-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(255,255,255,0.97)' : 'rgba(255,255,255,0.92)',
+        background: 'rgba(255,255,255,0.97)',
         backdropFilter: 'blur(20px)',
-        boxShadow: scrolled ? '0 2px 30px rgba(37,99,235,0.10)' : '0 1px 0 rgba(0,0,0,0.06)',
+        boxShadow: '0 1px 18px rgba(37,99,235,0.08)',
       }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -39,8 +32,12 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
             <img
-              src="/logo.png"
+              src="/logo-96.png"
               alt="Lorvix Solutions Logo"
+              width={96}
+              height={127}
+              decoding="async"
+              fetchPriority="high"
               className="w-9 h-9 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <span

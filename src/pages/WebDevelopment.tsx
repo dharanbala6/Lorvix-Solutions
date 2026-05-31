@@ -9,9 +9,9 @@ import {
   Palette, Code, Clock, ExternalLink, MessageCircle,
   Phone, TrendingUp, Shield, Search, Star, ChevronRight
 } from 'lucide-react';
-import ptlogo from '../assets/pt.png';
-import sclogo from '../assets/sc.png';
-import jslogo from '../assets/js.png';
+import ptlogo from '../assets/pt-160.png';
+import sclogo from '../assets/sc-160.png';
+import jslogo from '../assets/js-160.png';
 import webPortfolioImage from '../assets/web-portfolio.jpg';
 
 function useReveal() {
@@ -43,6 +43,8 @@ const portfolio = [
     grad: 'linear-gradient(135deg,#1d4ed8 0%,#0ea5e9 100%)',
     accent: '#2563eb', check: '#60a5fa', init: 'PT',
     logo: ptlogo,
+    logoWidth: 160,
+    logoHeight: 144,
   },
   {
     name: 'Spectrum Cutting Tools',
@@ -55,6 +57,8 @@ const portfolio = [
     grad: 'linear-gradient(135deg,#6d28d9 0%,#a855f7 100%)',
     accent: '#7c3aed', check: '#c084fc', init: 'SC',
     logo: sclogo,
+    logoWidth: 160,
+    logoHeight: 129,
   },
   {
     name: 'JS Engineering',
@@ -67,6 +71,8 @@ const portfolio = [
     grad: 'linear-gradient(135deg,#1e40af 0%,#3b82f6 100%)',
     accent: '#1d4ed8', check: '#93c5fd', init: 'JS',
     logo: jslogo,
+    logoWidth: 120,
+    logoHeight: 180,
   },
 ];
 
@@ -191,6 +197,11 @@ export default function WebDevelopment() {
                 <img
                   src={webPortfolioImage}
                   alt="Lorvix Solutions website portfolio preview"
+                  width={1200}
+                  height={800}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   className="h-[420px] w-full object-cover"
                 />
               </div>
@@ -260,6 +271,10 @@ export default function WebDevelopment() {
                         <img
                           src={p.logo}
                           alt={p.name}
+                          width={p.logoWidth}
+                          height={p.logoHeight}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-contain"
                         />
                       </div>

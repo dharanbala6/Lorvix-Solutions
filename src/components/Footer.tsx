@@ -45,8 +45,12 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-4">
               <div className="w-9 h-9 rounded-xl flex items-center justify-center p-1 shadow-sm">
                 <img
-                  src="/logo.png"
+                  src="/logo-96.png"
                   alt="Lorvix Solutions Logo"
+                  width={96}
+                  height={127}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain"
                 />
               </div>

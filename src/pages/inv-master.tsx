@@ -278,6 +278,11 @@ const Software = () => {
                   <img
                     src={invmasterDemo}
                     alt="InvMaster Professional Billing Dashboard"
+                    width={1200}
+                    height={800}
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                     className="w-full h-auto rounded-2xl"
                     title="Invoice Billing Software Dashboard"
                   />

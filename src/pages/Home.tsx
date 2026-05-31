@@ -9,15 +9,13 @@ import {
   Phone, MessageCircle, TrendingUp, Clock, Award,
   Users, Zap, Shield, ChevronRight
 } from 'lucide-react';
-import ptlogo from '../assets/pt.png';
-import sclogo from '../assets/sc.png';
-import jslogo from '../assets/js.png';
+import ptlogo from '../assets/pt-160.png';
+import sclogo from '../assets/sc-160.png';
+import jslogo from '../assets/js-160.png';
 
 /* ─── Animation styles injected once ─── */
 const STYLES = `
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-.lx-root * { font-family: 'Plus Jakarta Sans', sans-serif; }
+.lx-root * { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 
 @keyframes lx-float {
   0%,100% { transform: translateY(0px); }
@@ -193,6 +191,8 @@ const portfolio = [
     check: '#60a5fa',
     init: 'PT',
     logo: ptlogo,
+    logoWidth: 160,
+    logoHeight: 144,
   },
   {
     name: 'Spectrum Cutting Tools',
@@ -206,6 +206,8 @@ const portfolio = [
     check: '#c084fc',
     init: 'SC',
     logo: sclogo,
+    logoWidth: 160,
+    logoHeight: 129,
   },
   {
     name: 'JS Engineering',
@@ -219,6 +221,8 @@ const portfolio = [
     check: '#93c5fd',
     init: 'JS',
     logo: jslogo,
+    logoWidth: 120,
+    logoHeight: 180,
   },
 ];
 
@@ -461,6 +465,10 @@ export default function Home() {
                       <img
                         src={p.logo}
                         alt={p.name}
+                        width={p.logoWidth}
+                        height={p.logoHeight}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain"
                       />
                     </div>

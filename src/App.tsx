@@ -16,16 +16,39 @@ import NotFound from "./pages/NotFound";
 import { useEffect } from "react"; // Added
 import { useLocation } from "react-router-dom"; // Added
 import ScrollToTop from "@/components/ScrollToTop"; // ✅ Import ScrollToTop
-import ReactGA from 'react-ga4';
-ReactGA.initialize('G-4K8GZHM1P9');
-
 const queryClient = new QueryClient();
+const GA_MEASUREMENT_ID = 'G-4K8GZHM1P9';
+let gaInitialized = false;
 
 const GoogleAnalyticsTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    const sendPageView = async () => {
+      const { default: ReactGA } = await import('react-ga4');
+      if (!gaInitialized) {
+        ReactGA.initialize(GA_MEASUREMENT_ID);
+        gaInitialized = true;
+      }
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+    };
+
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    };
+
+    if (idleWindow.requestIdleCallback) {
+      const idleId = idleWindow.requestIdleCallback(() => {
+        void sendPageView();
+      }, { timeout: 3000 });
+      return () => idleWindow.cancelIdleCallback?.(idleId);
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      void sendPageView();
+    }, 1500);
+    return () => window.clearTimeout(timeoutId);
   }, [location]);
 
   return null;

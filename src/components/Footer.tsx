@@ -105,6 +105,7 @@ export default function Footer() {
                     <div>
                       <div className="text-sm font-medium">{site.name}</div>
                       <div className="text-[11px]" style={{ color: 'rgba(255,255,255,.35)' }}>{site.tag}</div>
+                      <div className="text-[11px] font-semibold text-blue-300">View Live Site</div>
                     </div>
                   </a>
                 </li>
@@ -116,10 +117,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h3>
             <div className="space-y-3">
-              <a href="mailto:lorvixsolutions@gmail.com"
+              <a href="mailto:support@lorvixsolutions.in"
                 className="flex items-start gap-2.5 text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-blue-400" />
-                lorvixsolutions@gmail.com
+                support@lorvixsolutions.in
               </a>
               <a href="tel:+919884948383"
                 className="flex items-start gap-2.5 text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,.55)' }}>

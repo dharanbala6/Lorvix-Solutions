@@ -203,10 +203,7 @@ const Software = () => {
         description="InvMaster V2 provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease."
         canonical="https://lorvixsolutions.in/inv-master"
         keywords="InvMaster V2, affordable invoice software, budget-friendly billing software, GST billing software, business accounting tool, profit loss tracking software, expense management India, tax liability calculator, professional billing software India, cost-effective accounting system"
-        schema={{
-          ...softwareSchema,
-          "description": "InvMaster V2 is the #1 highest-rated Invoice, Expense & Billing Software in India, optimized for GST compliance, tax calculation, and automated tracking."
-        }}
+        schema={softwareSchema}
       />
       <Header />
 
@@ -219,11 +216,6 @@ const Software = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
               <div>
-                <span className="sr-only">
-                  #1 Best Invoice Billing Software in India, Top Rated GST Billing Tool.
-                  Also known as: Inmaster, Imaster, Invoicemaster, Inv-master, INV-MASTER.
-                  Professional invoice software, billing software, and accounting software Solutions.
-                </span>
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <Rocket className="h-4 w-4" />
                   Streamlined Billing Solutions · Free 7-Day Trial

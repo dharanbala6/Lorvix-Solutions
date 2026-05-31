@@ -102,7 +102,7 @@ function localBusinessSchema() {
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/logo.png`,
-    email: 'lorvixsolutions@gmail.com',
+    email: 'support@lorvixsolutions.in',
     telephone: '+919884948383',
     priceRange: '$$',
     address: {

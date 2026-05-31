@@ -1,74 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lorvixsolutions.in/</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/" />
-    <image:image>
-      <image:loc>https://lorvixsolutions.in/logo.png</image:loc>
-      <image:title>Lorvix Solutions website development company</image:title>
-      <image:caption>Lorvix Solutions logo for professional website development in Chennai</image:caption>
-    </image:image>
   </url>
-
   <url>
     <loc>https://lorvixsolutions.in/web-development</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/web-development" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/web-development" />
+    <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://lorvixsolutions.in/web-design-company-chennai</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/web-design-company-chennai" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/web-design-company-chennai" />
-  </url>
-
-  <url>
-    <loc>https://lorvixsolutions.in/website-design-cost-chennai</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/website-design-cost-chennai" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/website-design-cost-chennai" />
-  </url>
-
-  <url>
-    <loc>https://lorvixsolutions.in/business-website-design-chennai</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/business-website-design-chennai" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/business-website-design-chennai" />
-  </url>
-
   <url>
     <loc>https://lorvixsolutions.in/inv-master</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/inv-master" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/inv-master" />
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://lorvixsolutions.in/contact</loc>
-    <lastmod>2026-05-19T00:00:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://lorvixsolutions.in/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lorvixsolutions.in/contact" />
   </url>
-
 </urlset>

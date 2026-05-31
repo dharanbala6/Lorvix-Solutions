@@ -18,8 +18,8 @@ export default function Header() {
 
   const nav = [
     { label: 'Home', href: '/' },
-    { label: 'Our Portfolio', href: '/web-development' },
-    { label: 'Software', href: '/inv-master' },
+    { label: 'Web Development', href: '/web-development' },
+    { label: 'Inv-master', href: '/inv-master' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -56,17 +56,21 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-7">
-            {nav.map(item => (
-              <Link key={item.href} to={item.href}
-                className="text-sm font-semibold transition-all duration-200 relative pb-0.5"
-                style={{ color: isActive(item.href) ? '#2563eb' : '#64748b' }}>
-                {item.label}
-                {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full" style={{ background: 'linear-gradient(90deg,#2563eb,#7c3aed)' }} />
-                )}
-              </Link>
-            ))}
+          <nav aria-label="Primary navigation" className="hidden md:block">
+            <ul className="flex items-center gap-7">
+              {nav.map(item => (
+                <li key={item.href}>
+                  <Link to={item.href}
+                    className="text-sm font-semibold transition-all duration-200 relative pb-0.5"
+                    style={{ color: isActive(item.href) ? '#2563eb' : '#64748b' }}>
+                    {item.label}
+                    {isActive(item.href) && (
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full" style={{ background: 'linear-gradient(90deg,#2563eb,#7c3aed)' }} />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
 
           {/* Desktop CTAs */}
@@ -92,13 +96,19 @@ export default function Header() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden border-t border-slate-100 pb-4 pt-2">
-            {nav.map(item => (
-              <Link key={item.href} to={item.href}
-                className="flex items-center px-3 py-3 rounded-lg text-base font-semibold transition-colors"
-                style={{ color: isActive(item.href) ? '#2563eb' : '#475569', background: isActive(item.href) ? '#eff6ff' : 'transparent' }}>
-                {item.label}
-              </Link>
-            ))}
+            <nav aria-label="Mobile primary navigation">
+              <ul className="space-y-1">
+                {nav.map(item => (
+                  <li key={item.href}>
+                    <Link to={item.href}
+                      className="flex items-center px-3 py-3 rounded-lg text-base font-semibold transition-colors"
+                      style={{ color: isActive(item.href) ? '#2563eb' : '#475569', background: isActive(item.href) ? '#eff6ff' : 'transparent' }}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
             <div className="flex flex-col gap-2 pt-4 px-3">
               <a href="https://wa.me/919884948383" target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-xl transition-colors text-sm">

@@ -112,6 +112,48 @@ export default function SEOHead({
     setLink('alternate', canonical, { hreflang: 'x-default' });
 
     // ── JSON-LD structured data ──
+    const siteNavigationSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Lorvix Solutions Primary Site Navigation',
+      itemListElement: [
+        {
+          '@type': 'SiteNavigationElement',
+          position: 1,
+          name: 'Home',
+          url: 'https://lorvixsolutions.in/',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 2,
+          name: 'Web Development',
+          url: 'https://lorvixsolutions.in/web-development',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 3,
+          name: 'Inv-master',
+          url: 'https://lorvixsolutions.in/inv-master',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 4,
+          name: 'Contact',
+          url: 'https://lorvixsolutions.in/contact',
+        },
+      ],
+    };
+
+    const siteNavigationSchemaId = 'site-navigation-schema';
+    let siteNavigationScript = document.getElementById(siteNavigationSchemaId) as HTMLScriptElement | null;
+    if (!siteNavigationScript) {
+      siteNavigationScript = document.createElement('script');
+      siteNavigationScript.type = 'application/ld+json';
+      siteNavigationScript.id = siteNavigationSchemaId;
+      document.head.appendChild(siteNavigationScript);
+    }
+    siteNavigationScript.text = JSON.stringify(siteNavigationSchema);
+
     const schemaId = 'seo-head-schema';
     document.getElementById(schemaId)?.remove();
     if (schema) {

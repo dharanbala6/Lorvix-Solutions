@@ -279,7 +279,7 @@ export default function WebDevelopment() {
                           <a href={p.url} target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm font-bold border-2 rounded-xl px-5 py-2.5 transition-all hover:scale-105 flex-shrink-0"
                             style={{ color: p.accent, borderColor: p.accent + '55', background: p.accent + '0a' }}>
-                            Visit Live Site <ExternalLink className="h-4 w-4" />
+                            View Live Site <ExternalLink className="h-4 w-4" />
                           </a>
                         </div>
 

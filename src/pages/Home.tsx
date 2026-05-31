@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
@@ -180,30 +180,6 @@ function useRevealRight() {
   return ref;
 }
 
-/* ─── Animated counter ─── */
-function Counter({ to, suffix = '' }: { to: number; suffix?: string }) {
-  const [val, setVal] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  useEffect(() => {
-    const obs = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      obs.disconnect();
-      let start = 0;
-      const duration = 1400;
-      const step = (ts: number, startTs: number) => {
-        const p = Math.min((ts - startTs) / duration, 1);
-        const ease = 1 - Math.pow(1 - p, 3);
-        setVal(Math.round(ease * to));
-        if (p < 1) requestAnimationFrame(ts2 => step(ts2, startTs));
-      };
-      requestAnimationFrame(ts => step(ts, ts));
-    }, { threshold: 0.5 });
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, [to]);
-  return <span ref={ref}>{val}{suffix}</span>;
-}
-
 const portfolio = [
   {
     name: 'Pavithra Travels',
@@ -344,14 +320,11 @@ export default function Home() {
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead
-        title="Lorvix Solutions – World-Class Web Development & Digital Strategy"
-        description="Lorvix Solutions is a global digital agency delivering world-class website development and custom software. Serving international clients with precision engineering from our offices in India and the USA."
+        title="Lorvix Solutions | Professional Web & Custom Software Development"
+        description="Build high-performance, mobile-friendly websites and scalable software platforms tailored for growth. Global tech delivery engineering standards based in Chennai."
         canonical="https://lorvixsolutions.in/"
-        keywords="affordable website maker, affordable web development, cost-effective website design, world-class website development, international web agency, professional web design India, web development company USA, custom enterprise software, Lorvix Solutions"
-        schema={{
-          ...homeSchema,
-          "description": "Lorvix Solutions is a premier global website development agency. We provide world-class and affordable digital solutions to businesses across the United States, Europe, and Asia."
-        }}
+        keywords="web development company Chennai, custom software solutions, business website development, UI UX design agency"
+        schema={homeSchema}
       />
       <Header />
 
@@ -375,7 +348,6 @@ export default function Home() {
 
             {/* Left */}
             <div ref={heroRef} className="lx-hidden">
-              <span className="sr-only">World-Class Website Development Agency, Top Rated Global Digital Solutions Provider</span>
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
                 <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
@@ -389,13 +361,6 @@ export default function Home() {
 
               <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[520px] leading-relaxed">
                 Lorvix Solutions is a <strong>world-class and affordable website development agency</strong>. We combine global design standards with <strong>cost-effective engineering</strong> to build high-performance digital platforms for businesses everywhere.
-              </p>
-
-              {/* SEO keywords hidden for crawlers */}
-              <p className="sr-only">
-                Website maker in Chennai, web development company Chennai Tamil Nadu,
-                affordable website maker in USA, professional website design India,
-                business website development, custom website Chennai.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -425,10 +390,10 @@ export default function Home() {
                 <p className="text-[10px] font-bold uppercase tracking-[.15em] text-slate-400 mb-4">Our Track Record</p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon: <Globe className="h-5 w-5" />, label: 'Websites Delivered', val: 3, suf: '+' },
-                    { icon: <Star className="h-5 w-5" />, label: 'Client Satisfaction', val: 100, suf: '%' },
-                    { icon: <Clock className="h-5 w-5" />, label: 'Support Response', val: 24, suf: 'h' },
-                    { icon: <Zap className="h-5 w-5" />, label: 'Weeks to Launch', val: '1–4', suf: 'wk' },
+                    { icon: <Globe className="h-5 w-5" />, label: 'Websites Delivered', value: '50+' },
+                    { icon: <Star className="h-5 w-5" />, label: 'Client Satisfaction', value: '98%' },
+                    { icon: <Clock className="h-5 w-5" />, label: 'Average Support Response', value: '2h' },
+                    { icon: <Zap className="h-5 w-5" />, label: 'Weeks to Launch', value: '1–4wk' },
                   ].map((r, i) => (
                     <div key={i} className="flex items-start gap-3 rounded-xl p-4"
                       style={{ background: 'linear-gradient(135deg,#eff6ff,#f5f3ff)' }}>
@@ -438,14 +403,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="text-2xl font-extrabold text-slate-900 leading-none" style={{ animation: 'lx-countup .5s ease both', animationDelay: `${i * .1}s` }}>
-                          {typeof r.val === 'number' ? (
-                            <Counter to={r.val} suffix={r.suf} />
-                          ) : (
-                            <span>
-                              {r.val}
-                              <span className="text-sm ml-1 text-slate-500">{r.suf}</span>
-                            </span>
-                          )}
+                          {r.value}
                         </div>
                         <div className="text-[11px] text-slate-500 mt-1 leading-tight">{r.label}</div>
                       </div>
@@ -490,7 +448,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
               {portfolio.map((p, i) => (
-                <a key={i} href={p.url} target="_blank" rel="noopener noreferrer"
+                <article key={i}
                   className="lx-port-card group relative rounded-2xl border-2 border-slate-100 overflow-hidden bg-white block"
                   style={{ animationDelay: `${i * .12}s` }}>
                   <div className="port-shine" />
@@ -529,12 +487,14 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    <span className="inline-flex items-center gap-2 text-sm font-bold" style={{ color: p.accent }}>
-                      Visit Live Website
+                    <a href={p.url} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-bold"
+                      style={{ color: p.accent }}>
+                      View Live Site
                       <span className="port-arrow"><ChevronRight className="h-4 w-4" /></span>
-                    </span>
+                    </a>
                   </div>
-                </a>
+                </article>
               ))}
             </div>
 

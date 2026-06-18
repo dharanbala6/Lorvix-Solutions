@@ -40,9 +40,9 @@ const Software = () => {
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
-        "lowPrice": "299",
+        "lowPrice": "0",
         "highPrice": "2499",
-        "offerCount": "3"
+        "offerCount": "4"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -128,49 +128,83 @@ const Software = () => {
 
   const plans = [
     {
-      name: 'Monthly',
-      subtitle: 'Flexible, month-by-month',
+      name: 'Free Forever',
+      subtitle: 'Everything you need to get started',
+      price: '0',
+      period: 'forever',
+      mini: 'For freelancers and new businesses',
+      note: '15 invoices/month · 15 expenses/month',
+      featured: false,
+      secondary: false,
+      saveTag: '',
+      features: [
+        '15 invoices/month',
+        '15 expenses/month',
+        'Client management',
+        'Professional PDF invoices',
+        'GST-ready reports',
+        'Dashboard insights',
+        'Cloud access',
+      ],
+    },
+    {
+      name: 'Premium Monthly',
+      subtitle: 'Flexible monthly access',
       price: '299',
       period: 'per month',
-      mini: '~₹10/day — less than a cup of chai',
-      note: '7 days free · then ₹299/month',
+      mini: 'For businesses that want flexibility',
+      note: 'Same Premium features, monthly billing',
       featured: false,
+      secondary: false,
       saveTag: '',
-      buttonVariant: 'outline' as const,
+      features: [
+        'Limitless Invoices',
+        'Effortless expense tracking',
+        'GST-ready reports',
+        'Paid and pending tracking',
+        'Professional PDFs',
+        'Any-device access',
+        'Secure cloud storage',
+      ],
     },
     {
-      name: '6 Months',
-      subtitle: 'Best value for growing businesses',
+      name: 'Premium Half-Yearly',
+      subtitle: 'Best balance of savings and flexibility',
       price: '1,499',
       period: 'per 6 months',
-      mini: '~₹8.3/day · save 16%',
-      note: '7 days free · then ₹1,499 / 6 months',
-      featured: false,
-      saveTag: 'SAVE 16%',
-      buttonVariant: 'outline' as const,
+      mini: 'Our most popular plan',
+      note: 'Save ₹295 compared to Monthly billing',
+      featured: true,
+      secondary: false,
+      saveTag: 'MOST POPULAR',
+      features: [
+        'Everything in Premium',
+        'Unlimited invoices and expenses',
+        'No spreadsheets needed',
+        'Faster record management',
+        'Save ₹295',
+        'Small business favorite',
+      ],
     },
     {
-      name: 'Yearly',
-      subtitle: 'Maximum savings, maximum value',
+      name: 'Premium Yearly',
+      subtitle: 'Lowest effective monthly cost',
       price: '2,499',
       period: 'per year',
-      mini: '~₹6.8/day · save 30%',
-      note: '7 days free · then ₹2,499/year',
-      featured: true,
-      saveTag: 'SAVE 30%',
-      buttonVariant: 'default' as const,
+      mini: 'Best value for growing businesses',
+      note: 'Save ₹1,089 compared to Monthly billing',
+      featured: false,
+      secondary: true,
+      saveTag: 'BEST VALUE',
+      features: [
+        'Everything in Premium',
+        'Unlimited business records',
+        'Maximum yearly savings',
+        'Lowest monthly cost',
+        'Save ₹1,089',
+        'For long-term growth',
+      ],
     },
-  ];
-
-  const planFeatures = [
-    'Unlimited invoice creation',
-    'Client management system',
-    'Payment due tracking',
-    'Financial reports & analytics',
-    'Monthly Excel exports',
-    'New: Expense & Tax tracking',
-    'New: P&L & Vendor dues',
-    'Free updates & new features',
   ];
 
   const faqItems = [
@@ -218,7 +252,7 @@ const Software = () => {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <Rocket className="h-4 w-4" />
-                  Streamlined Billing Solutions · Free 7-Day Trial
+                  Streamlined Billing Solutions · Free Forever Plan
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
@@ -240,7 +274,7 @@ const Software = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Start Free Trial
+                      Choose Plan
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>
@@ -264,7 +298,7 @@ const Software = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    From ₹299/month
+                    Free Forever available
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
@@ -384,41 +418,38 @@ const Software = () => {
                 Simple, Transparent Plans
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Start free for 7 days. Pick the plan that fits your business best.
+                Start free forever. Upgrade only when your business grows.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
               {plans.map((plan) => (
                 <div
                   key={plan.name}
-                  className={`relative rounded-3xl border transition-all duration-300 ${plan.featured
+                  className={`relative rounded-3xl border transition-all duration-300 flex flex-col ${plan.featured
                     ? 'border-primary/50 bg-gradient-to-b from-primary/10 to-card shadow-2xl lg:-translate-y-2'
+                    : plan.secondary
+                    ? 'border-sky-400/50 bg-gradient-to-b from-sky-500/10 to-card shadow-lg'
                     : 'border-border/60 bg-card shadow-sm hover:shadow-xl'
                     }`}
                 >
-                  {plan.featured && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary text-primary-foreground px-5 py-2 text-xs font-bold tracking-[0.18em] uppercase shadow-lg">
-                      Most Popular
+                  {plan.saveTag && (
+                    <div className={`absolute -top-4 left-1/2 -translate-x-1/2 rounded-full px-5 py-2 text-xs font-bold tracking-[0.18em] uppercase shadow-lg ${plan.featured ? 'bg-primary text-primary-foreground' : 'bg-sky-500 text-white'}`}>
+                      {plan.saveTag}
                     </div>
                   )}
 
-                  <div className="p-8">
+                  <div className="p-7 flex h-full flex-col">
                     <div className="mb-2 flex items-center gap-2 flex-wrap">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                      <p className="text-lg font-semibold tracking-tight">
                         {plan.name}
                       </p>
-                      {plan.saveTag && (
-                        <span className="rounded-full bg-primary/10 text-primary text-xs font-bold px-3 py-1">
-                          {plan.saveTag}
-                        </span>
-                      )}
                     </div>
 
                     <p className="text-sm text-muted-foreground mb-6">{plan.subtitle}</p>
 
                     <div className="flex items-start gap-1 mb-2">
-                      <IndianRupee className="h-6 w-6 text-primary mt-2" />
+                      <IndianRupee className="h-5 w-5 text-primary mt-2" />
                       <span className="text-5xl font-bold tracking-tight">{plan.price}</span>
                     </div>
 
@@ -431,7 +462,7 @@ const Software = () => {
                     <div className="h-px bg-border mb-7" />
 
                     <ul className="space-y-4 mb-8">
-                      {planFeatures.map((feature) => (
+                      {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3 text-sm text-muted-foreground">
                           <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                           <span>{feature}</span>
@@ -443,14 +474,14 @@ const Software = () => {
                       asChild
                       size="lg"
                       variant={plan.featured ? 'default' : 'outline'}
-                      className="w-full"
+                      className="w-full mt-auto"
                     >
                       <a
                         href="https://invmaster.lorvixsolutions.in/register"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Start Free Trial
+                        Choose Plan
                       </a>
                     </Button>
 
@@ -463,7 +494,7 @@ const Software = () => {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-primary" />
-                15-day money-back guarantee
+                Free Forever plan
               </div>
               <div className="flex items-center gap-2">
                 <Receipt className="h-4 w-4 text-primary" />
@@ -526,7 +557,7 @@ const Software = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Start Your 7-Day Free Trial
+                  Choose Plan
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

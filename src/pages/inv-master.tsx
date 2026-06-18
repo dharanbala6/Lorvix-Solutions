@@ -24,6 +24,9 @@ import {
 } from 'lucide-react';
 
 const Software = () => {
+  const registerUrl =
+    'https://invmaster.lorvixsolutions.in/register?source=lorvix&backlink=https%3A%2F%2Florvixsolutions.in%2Finv-master';
+
   const softwareSchema = [
     {
       "@context": "https://schema.org",
@@ -270,7 +273,7 @@ const Software = () => {
                     className="text-base px-8 py-6"
                   >
                     <a
-                      href="https://invmaster.lorvixsolutions.in/register"
+                      href={registerUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -477,7 +480,7 @@ const Software = () => {
                       className="w-full mt-auto"
                     >
                       <a
-                        href="https://invmaster.lorvixsolutions.in/register"
+                        href={registerUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -553,7 +556,7 @@ const Software = () => {
 
               <Button asChild size="lg" className="text-base px-8 py-6">
                 <a
-                  href="https://invmaster.lorvixsolutions.in/register"
+                  href={registerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

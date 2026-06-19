@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
-import invmasterDemo from '@/assets/invmaster-demo.jpg';
+import lorvixBillingDemo from '@/assets/lorvix-billing-demo.jpg';
 import {
   CheckCircle,
   ArrowRight,
@@ -25,17 +25,17 @@ import {
 
 const Software = () => {
   const registerUrl =
-    'https://invmaster.lorvixsolutions.in/register?source=lorvix&backlink=https%3A%2F%2Florvixsolutions.in%2Finv-master';
+    'https://billing.lorvixsolutions.in/register?source=lorvix&backlink=https%3A%2F%2Florvixsolutions.in%2Finv-master';
 
   const softwareSchema = [
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "InvMaster",
-      "alternateName": ["InvMaster", "Inmaster", "Imaster", "Invoicemaster", "Inv-master", "INV-MASTER", "Invoice Master", "InvMaster accounting software"],
+      "name": "Lorvix Billing",
+      "alternateName": ["Lorvix Billing", "Lorvix Billing Software", "Lorvix Billing accounting software", "Lorvix invoice software", "Lorvix GST billing software"],
       "applicationCategory": "BusinessApplication, AccountingApplication, FinancialApplication",
       "operatingSystem": "Web",
-      "description": "InvMaster is professional invoice software and billing software for small businesses in India. Create GST invoices, track expenses, monitor profit & loss, and calculate tax liability efficiently.",
+      "description": "Lorvix Billing is professional invoice software and billing software for small businesses in India. Create GST invoices, track expenses, monitor profit & loss, and calculate tax liability efficiently.",
       "brand": {
         "@type": "Brand",
         "name": "Lorvix Solutions"
@@ -123,8 +123,8 @@ const Software = () => {
     'Avoid manual calculation and billing errors',
     'Track payment dues and customer balances clearly',
     'Create GST-ready invoices for Indian businesses',
-    'New in V2: Complete Profit & Loss (P&L) tracking',
-    'New in V2: Expense management & tax calculations',
+    'Complete Profit & Loss (P&L) tracking',
+    'Expense management & tax calculations',
     'Access invoice and billing data from anywhere',
     'Export monthly sales and business data easily',
   ];
@@ -212,34 +212,34 @@ const Software = () => {
 
   const faqItems = [
     {
-      q: 'What is InvMaster V2?',
-      a: 'InvMaster V2 is a comprehensive invoice and accounting software built for small businesses. It combines fast invoicing, expense tracking, profit & loss (P&L) monitoring, and tax liability calculations into one easy-to-use platform.',
+      q: 'What is Lorvix Billing?',
+      a: 'Lorvix Billing is a comprehensive invoice and accounting software built for small businesses. It combines fast invoicing, expense tracking, profit & loss (P&L) monitoring, and tax liability calculations into one easy-to-use platform.',
     },
     {
-      q: 'Does InvMaster V2 support GST billing and tax calculations?',
-      a: 'Yes. InvMaster V2 is optimized for Indian businesses. You can create GST-compliant invoices and automatically calculate your GST tax liability based on sales and expenses.',
+      q: 'Does Lorvix Billing support GST billing and tax calculations?',
+      a: 'Yes. Lorvix Billing is optimized for Indian businesses. You can create GST-compliant invoices and automatically calculate your GST tax liability based on sales and expenses.',
     },
     {
       q: 'Can I track business profit and loss (P&L)?',
-      a: 'Absolutely. InvMaster V2 features a built-in accounting module that compares your sales and expenses to provide a clear view of your business profit or loss and overall financial health.',
+      a: 'Absolutely. Lorvix Billing features a built-in accounting module that compares your sales and expenses to provide a clear view of your business profit or loss and overall financial health.',
     },
     {
       q: 'How does expense and vendor tracking work?',
       a: 'You can record all your business expenses and track outward payments to vendors. The system also monitors remaining dues so you never miss a payment and keep your accounts accurate.',
     },
     {
-      q: 'Who is InvMaster V2 ideal for?',
-      a: 'InvMaster V2 is perfect for service providers, small business owners, agencies, traders, and entrepreneurs who need a professional but affordable way to manage billing, expenses, and business accounting.',
+      q: 'Who is Lorvix Billing  ideal for?',
+      a: 'Lorvix Billing is perfect for service providers, small business owners, agencies, traders, and entrepreneurs who need a professional but affordable way to manage billing, expenses, and business accounting.',
     },
   ];
 
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead
-        title="Professional Invoice, Expense & Billing Software | InvMaster V2"
-        description="InvMaster V2 provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease."
-        canonical="https://lorvixsolutions.in/inv-master"
-        keywords="InvMaster V2, affordable invoice software, budget-friendly billing software, GST billing software, business accounting tool, profit loss tracking software, expense management India, tax liability calculator, professional billing software India, cost-effective accounting system"
+        title="Professional Invoice, Expense & Billing Software | Lorvix Billing"
+        description="Lorvix Billing provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease."
+        canonical="https://lorvixsolutions.in/lorvix-billing"
+        keywords="Lorvix Billing, affordable invoice software, budget-friendly billing software, GST billing software, business accounting tool, profit loss tracking software, expense management India, tax liability calculator, professional billing software India, cost-effective accounting system"
         schema={softwareSchema}
       />
       <Header />
@@ -263,7 +263,7 @@ const Software = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground leading-8 mb-8 max-w-2xl">
-                  Manage your business finances with <strong>InvMaster V2</strong>. An <strong>affordable invoice, expense, and P&L management</strong> system designed to simplify <strong>GST billing and tax liability</strong>.
+                  Manage your business finances with <strong>Lorvix Billing</strong>. An <strong>affordable invoice, expense, and P&L management</strong> system designed to simplify <strong>GST billing and tax liability</strong>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -313,8 +313,8 @@ const Software = () => {
               <div className="relative">
                 <div className="rounded-3xl border border-border/60 bg-card shadow-2xl p-4">
                   <img
-                    src={invmasterDemo}
-                    alt="InvMaster Professional Billing Dashboard"
+                    src={lorvixBillingDemo}
+                    alt="Lorvix Billing Professional Billing Dashboard"
                     width={1200}
                     height={800}
                     loading="eager"
@@ -340,7 +340,7 @@ const Software = () => {
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-8">
               If you are searching for invoice software, billing software, or GST billing software
-              for your business, InvMaster gives you a practical system to create invoices faster,
+              for your business, Lorvix Billing gives you a practical system to create invoices faster,
               manage clients better, and stay on top of payments.
             </p>
           </div>
@@ -387,7 +387,7 @@ const Software = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
-                  Why InvMaster
+                  Why Lorvix Billing
                 </p>
                 <h3 className="text-3xl md:text-5xl font-bold mb-6">
                   Transform Your Invoice Management
@@ -522,7 +522,7 @@ const Software = () => {
                 Frequently Asked Questions
               </h2>
               <p className="text-xl text-muted-foreground">
-                Common questions about InvMaster invoice and billing software.
+                Common questions about Lorvix Billing invoice and billing software.
               </p>
             </div>
 
@@ -550,7 +550,7 @@ const Software = () => {
                 Ready to Take Control of Your Invoicing?
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Join businesses using InvMaster to bill smarter, track payments clearly, and manage
+                Join businesses using Lorvix Billing to bill smarter, track payments clearly, and manage
                 clients more efficiently.
               </p>
 

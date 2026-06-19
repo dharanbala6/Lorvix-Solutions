@@ -132,8 +132,8 @@ export default function SEOHead({
         {
           '@type': 'SiteNavigationElement',
           position: 3,
-          name: 'Inv-master',
-          url: 'https://lorvixsolutions.in/inv-master',
+          name: 'Lorvix Billing',
+          url: 'https://lorvixsolutions.in/lorvix-billing',
         },
         {
           '@type': 'SiteNavigationElement',

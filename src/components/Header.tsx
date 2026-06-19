@@ -12,7 +12,7 @@ export default function Header() {
   const nav = [
     { label: 'Home', href: '/' },
     { label: 'Web Development', href: '/web-development' },
-    { label: 'Inv-master', href: '/inv-master' },
+    { label: 'Lorvix Billing', href: '/lorvix-billing' },
     { label: 'Contact', href: '/contact' },
   ];
 

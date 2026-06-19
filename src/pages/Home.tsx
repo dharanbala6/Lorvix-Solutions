@@ -592,9 +592,9 @@ export default function Home() {
                     style={{ background: 'linear-gradient(135deg,#7c3aed,#2563eb)' }}>
                     <Zap className="h-7 w-7" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3">InvMaster V2 — Invoicing & Accounting</h3>
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Lorvix Billing — Invoicing & Accounting</h3>
                   <p className="text-slate-500 mb-6 leading-relaxed">
-                    The complete billing and accounting system. InvMaster V2 automates invoicing, tracks expenses, 
+                    The complete billing and accounting system. Lorvix Billing automates invoicing, tracks expenses, 
                     calculates tax liability, and monitors profit & loss for your business.
                   </p>
                   <ul className="space-y-2.5 mb-8">
@@ -606,7 +606,7 @@ export default function Home() {
                       ))}
                   </ul>
                   <Button asChild variant="outline" className="font-bold border-2 border-violet-300 text-violet-700 hover:bg-violet-50 transition-all hover:scale-105 hover:border-violet-500">
-                    <Link to="/inv-master">Learn About InvMaster <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link to="/lorvix-billing">Learn About Lorvix Billing <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>

@@ -286,7 +286,7 @@ const Software = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Choose Plan
+                      Start for Free
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>

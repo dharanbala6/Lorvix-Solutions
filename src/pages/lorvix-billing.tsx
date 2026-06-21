@@ -25,7 +25,7 @@ import {
 
 const Software = () => {
   const registerUrl =
-    'https://billing.lorvixsolutions.in/register?source=lorvix&backlink=https%3A%2F%2Florvixsolutions.in%2Finv-master';
+    'https://billing.lorvixsolutions.in/register?source=lorvix&backlink=https%3A%2F%2Florvixsolutions.in%2Florvix-billing';
 
   const softwareSchema = [
     {
@@ -66,67 +66,67 @@ const Software = () => {
       icon: <BarChart3 className="h-6 w-6" />,
       title: 'Advanced Analytics',
       description:
-        'Track revenue, invoice performance, outstanding dues, and monthly billing trends with clarity.',
+        'Track revenue, invoice performance, outstanding dues, and monthly billing trends at a glance.',
     },
     {
       icon: <Users className="h-6 w-6" />,
       title: 'Client Management',
       description:
-        'Keep all your customer data, contact details, and billing history in one central place.',
+        'Keep all your customer data, contact details, and billing history organized in one place.',
     },
     {
       icon: <Receipt className="h-6 w-6" />,
-      title: 'Payment Due Tracking',
+      title: 'Payment Tracking',
       description:
-        'Know which invoices are paid, pending, or overdue so follow-ups become easier and faster.',
+        'Know exactly which invoices are paid, pending, or overdue so you can follow up faster.',
     },
     {
       icon: <FileSpreadsheet className="h-6 w-6" />,
-      title: 'Monthly Excel Reports',
+      title: 'No Spreadsheets Needed',
       description:
-        'Export business and sales data into ready-to-use Excel sheets for your records and accountant.',
+        'Export your business data into ready-to-use Excel sheets when you need to share them with your accountant.',
     },
     {
       icon: <Shield className="h-6 w-6" />,
-      title: 'Business-Ready System',
+      title: 'Secure Cloud Storage',
       description:
-        'Designed for Indian businesses that need reliable GST billing, clean workflows, and easy access.',
+        'Your data is safely backed up in the cloud, accessible only to you from any device, anywhere.',
     },
     {
       icon: <Wallet className="h-6 w-6" />,
       title: 'Expense Tracking',
       description:
-        'Monitor your business spending with ease. Categorize expenses and keep your cash flow in check.',
+        'Monitor your business spending effortlessly. Categorize expenses and keep your cash flow positive.',
     },
     {
       icon: <Calculator className="h-6 w-6" />,
-      title: 'Tax Liability Calculation',
+      title: 'Tax & GST Ready',
       description:
-        'Automatically calculate your GST and tax liabilities so you are always ready for filing.',
+        'Automatically calculate your GST so you are always prepared for tax filing season.',
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Business Accounting',
+      title: 'Performance Reports',
       description:
-        'Monitor Profit & Loss by comparing sales and expenses. Get a clear view of your business financial health.',
+        'Compare sales and expenses to get a clear, honest view of your business\'s financial health.',
     },
     {
       icon: <ArrowUpCircle className="h-6 w-6" />,
-      title: 'Vendor Balance Tracking',
+      title: 'Vendor Tracking',
       description:
-        'Track outward payments and remaining dues to vendors and suppliers for better financial transparency.',
+        'Keep track of outward payments and dues to suppliers to maintain great vendor relationships.',
     },
   ];
 
   const benefits = [
-    'Reduce invoice processing time and simplify daily billing',
-    'Avoid manual calculation and billing errors',
-    'Track payment dues and customer balances clearly',
-    'Create GST-ready invoices for Indian businesses',
-    'Complete Profit & Loss (P&L) tracking',
-    'Expense management & tax calculations',
-    'Access invoice and billing data from anywhere',
-    'Export monthly sales and business data easily',
+    'Create invoices in seconds, not minutes',
+    'Track expenses without dealing with spreadsheets',
+    'Get GST-ready reports exactly when you need them',
+    'See your business performance at a glance',
+    'Know instantly which invoices are pending or paid',
+    'Access your business data securely from anywhere',
+    'Generate professional PDF invoices for every client',
+    'Built specifically for Indian small businesses',
   ];
 
   const plans = [
@@ -134,9 +134,9 @@ const Software = () => {
       name: 'Free Forever',
       subtitle: 'Everything you need to get started',
       price: '0',
-      period: 'forever',
-      mini: 'For freelancers and new businesses',
-      note: '15 invoices/month · 15 expenses/month',
+      period: '',
+      mini: 'For freelancers and new businesses.',
+      note: '',
       featured: false,
       secondary: false,
       saveTag: '',
@@ -149,34 +149,60 @@ const Software = () => {
         'Dashboard insights',
         'Cloud access',
       ],
+      buttonText: 'Start Free',
+      buttonVariant: 'outline'
     },
     {
       name: 'Premium Monthly',
       subtitle: 'Flexible monthly access',
       price: '299',
-      period: 'per month',
-      mini: 'For businesses that want flexibility',
-      note: 'Same Premium features, monthly billing',
+      period: '',
+      mini: 'For businesses that want flexibility.',
+      note: '',
       featured: false,
       secondary: false,
       saveTag: '',
       features: [
-        'Limitless Invoices',
+        'Invoices in seconds',
         'Effortless expense tracking',
+        'Unlimited clients',
         'GST-ready reports',
         'Paid and pending tracking',
         'Professional PDFs',
         'Any-device access',
-        'Secure cloud storage',
+        'Secure cloud storage'
       ],
+      buttonText: 'Choose Monthly',
+      buttonVariant: 'default'
+    },
+    {
+      name: 'Premium Yearly',
+      subtitle: 'Lowest effective monthly cost',
+      price: '2,499',
+      period: '',
+      mini: 'Best value for growing businesses.',
+      note: '',
+      featured: false,
+      secondary: true,
+      saveTag: 'BEST VALUE',
+      features: [
+        'Everything in Premium',
+        'Unlimited records',
+        'Maximum yearly savings',
+        'Lowest monthly cost',
+        'Save ₹1,089',
+        'For long-term growth',
+      ],
+      buttonText: 'Choose Yearly',
+      buttonVariant: 'default'
     },
     {
       name: 'Premium Half-Yearly',
       subtitle: 'Best balance of savings and flexibility',
       price: '1,499',
-      period: 'per 6 months',
-      mini: 'Our most popular plan',
-      note: 'Save ₹295 compared to Monthly billing',
+      period: '',
+      mini: 'Our most popular plan.',
+      note: '',
       featured: true,
       secondary: false,
       saveTag: 'MOST POPULAR',
@@ -188,25 +214,8 @@ const Software = () => {
         'Save ₹295',
         'Small business favorite',
       ],
-    },
-    {
-      name: 'Premium Yearly',
-      subtitle: 'Lowest effective monthly cost',
-      price: '2,499',
-      period: 'per year',
-      mini: 'Best value for growing businesses',
-      note: 'Save ₹1,089 compared to Monthly billing',
-      featured: false,
-      secondary: true,
-      saveTag: 'BEST VALUE',
-      features: [
-        'Everything in Premium',
-        'Unlimited business records',
-        'Maximum yearly savings',
-        'Lowest monthly cost',
-        'Save ₹1,089',
-        'For long-term growth',
-      ],
+      buttonText: 'Choose Half-Yearly',
+      buttonVariant: 'default'
     },
   ];
 
@@ -432,8 +441,8 @@ const Software = () => {
                   className={`relative rounded-3xl border transition-all duration-300 flex flex-col ${plan.featured
                     ? 'border-primary/50 bg-gradient-to-b from-primary/10 to-card shadow-2xl lg:-translate-y-2'
                     : plan.secondary
-                    ? 'border-sky-400/50 bg-gradient-to-b from-sky-500/10 to-card shadow-lg'
-                    : 'border-border/60 bg-card shadow-sm hover:shadow-xl'
+                      ? 'border-sky-400/50 bg-gradient-to-b from-sky-500/10 to-card shadow-lg'
+                      : 'border-border/60 bg-card shadow-sm hover:shadow-xl'
                     }`}
                 >
                   {plan.saveTag && (

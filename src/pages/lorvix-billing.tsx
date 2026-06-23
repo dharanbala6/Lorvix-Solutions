@@ -245,7 +245,7 @@ const Software = () => {
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead
-        title="Professional Invoice, Expense & Billing Software | Lorvix Billing"
+        title="Free GST Billing Software with Expense & Due Tracking | Lorvix Billing | Lorvix Billing"
         description="Lorvix Billing provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease."
         canonical="https://lorvixsolutions.in/lorvix-billing"
         keywords="Lorvix Billing, affordable invoice software, budget-friendly billing software, GST billing software, business accounting tool, profit loss tracking software, expense management India, tax liability calculator, professional billing software India, cost-effective accounting system"

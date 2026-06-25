@@ -86,6 +86,47 @@
     }
   </script>
 
+  <script>
+    (function () {
+      if (window.location.pathname !== '/lorvix-billing') return;
+
+      var title = 'Free GST Billing Software with Expense & Due Tracking | Lorvix Billing';
+      var description = 'Lorvix Billing provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease.';
+      var canonical = 'https://lorvixsolutions.in/lorvix-billing';
+
+      document.title = title;
+
+      function setMeta(attr, key, content) {
+        var selector = 'meta[' + attr + '="' + key + '"]';
+        var tag = document.querySelector(selector);
+        if (!tag) {
+          tag = document.createElement('meta');
+          tag.setAttribute(attr, key);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      }
+
+      function setLink(rel, href) {
+        var tag = document.querySelector('link[rel="' + rel + '"]');
+        if (!tag) {
+          tag = document.createElement('link');
+          tag.setAttribute('rel', rel);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('href', href);
+      }
+
+      setMeta('name', 'description', description);
+      setMeta('property', 'og:title', title);
+      setMeta('property', 'og:description', description);
+      setMeta('property', 'og:url', canonical);
+      setMeta('name', 'twitter:title', title);
+      setMeta('name', 'twitter:description', description);
+      setLink('canonical', canonical);
+    })();
+  </script>
+
   <!-- ═══ Theme color / PWA hints ═══ -->
   <meta name="theme-color" content="#2563eb" />
   <meta name="msapplication-TileColor" content="#2563eb" />

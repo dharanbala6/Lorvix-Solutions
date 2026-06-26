@@ -1,32 +1,21 @@
-# ═══ Lorvix Solutions — robots.txt ═══
-# SEO + AEO + GEO + AIO Optimised
+# Lorvix Solutions robots.txt
+# Search engine access and sitemap location
 
-# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
 Allow: /
 
-User-agent: Googlebot-News
-Allow: /
-
 User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
 Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
+User-agent: Slurp
 Allow: /
 
-User-agent: YandexBot
-Allow: /
-
-# Social media crawlers
 User-agent: Twitterbot
 Allow: /
 
@@ -36,23 +25,13 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: Pinterestbot
-Allow: /
-
 User-agent: WhatsApp
-Allow: /
-
-# AI Answer Engine crawlers (AEO + AIO)
-User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Anthropic-AI
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -64,20 +43,9 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-# Default: allow everyone
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-# Sitemaps
 Sitemap: https://lorvixsolutions.in/sitemap.xml
-
-# Host
-Host: https://lorvixsolutions.in

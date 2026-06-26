@@ -12,7 +12,6 @@
   <!-- Optimized SEO Architecture -->
   <title>Lorvix Solutions | Professional Web & Custom Software Development</title>
   <meta name="description" content="Build high-performance, mobile-friendly websites and scalable software platforms tailored for growth. Global tech delivery engineering standards based in Chennai.">
-  <meta name="keywords" content="web development company Chennai, custom software solutions, business website development, UI UX design agency">
   <meta name="author" content="Lorvix Solutions">
   <meta name="publisher" content="Lorvix Solutions">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -50,10 +49,12 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebDevelopmentService",
+      "@type": "ProfessionalService",
+      "@id": "https://lorvixsolutions.in/#organization",
       "name": "Lorvix Solutions",
       "image": "https://lorvixsolutions.in/logo.png",
       "url": "https://lorvixsolutions.in",
+      "email": "support@lorvixsolutions.in",
       "telephone": "+919884948383",
       "priceRange": "$$",
       "address": {
@@ -63,11 +64,12 @@
         "postalCode": "600069",
         "addressCountry": "IN"
       },
+      "description": "Lorvix Solutions designs and develops business websites, e-commerce sites, product catalogues, and custom software for clients in Chennai, India, and remote markets.",
       "serviceType": [
-        "Custom Web Application Development",
-        "E-commerce Platform Architecture",
-        "Enterprise Software Development",
-        "UI/UX Digital Interface Prototyping"
+        "Business website development",
+        "E-commerce website development",
+        "Product catalogue websites",
+        "Custom web software"
       ],
       "areaServed": [
         {
@@ -79,20 +81,51 @@
           "name": "United States"
         }
       ],
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Lorvix Solutions"
-      }
+      "sameAs": []
     }
   </script>
 
   <script>
     (function () {
-      if (window.location.pathname !== '/lorvix-billing') return;
+      var base = 'https://lorvixsolutions.in';
+      var pages = {
+        '/': {
+          title: 'Lorvix Solutions | Website Development Company in Chennai',
+          description: 'Lorvix Solutions builds fast, mobile-friendly business websites, product catalogues, e-commerce sites, and custom software for Chennai, India, and remote clients.'
+        },
+        '/web-development': {
+          title: 'Web Design Company in Chennai | Website Development Services',
+          description: 'Chennai website development company building fast, mobile-first, SEO-ready business websites with live portfolio proof and direct developer support.'
+        },
+        '/web-design-company-chennai': {
+          title: 'Web Design Company in Chennai | Website Development Services',
+          description: 'Lorvix Solutions builds clean, fast, mobile-first websites for Chennai businesses that need stronger trust, better enquiries, and a practical online presence.'
+        },
+        '/website-design-cost-chennai': {
+          title: 'Website Design Cost in Chennai | Web Development Packages',
+          description: 'Understand website design cost in Chennai, including business website, redesign, catalogue, e-commerce, and custom web development package factors.'
+        },
+        '/business-website-design-chennai': {
+          title: 'Business Website Design Chennai | Industry Website Developers',
+          description: 'Industry-focused business website design in Chennai for travel, manufacturing, clinics, retail, real estate, restaurants, logistics, and local service companies.'
+        },
+        '/lorvix-billing': {
+          title: 'Free GST Billing Software with Expense & Due Tracking | Lorvix Billing',
+          description: 'Lorvix Billing helps Indian small businesses create GST invoices, track expenses, monitor dues, and understand profit and loss from a simple web dashboard.'
+        },
+        '/contact': {
+          title: 'Contact Lorvix Solutions | Chennai Website Quote',
+          description: 'Share your website or software requirements with Lorvix Solutions and get a practical Chennai web development quote with timeline and scope guidance.'
+        }
+      };
 
-      var title = 'Free GST Billing Software with Expense & Due Tracking | Lorvix Billing';
-      var description = 'Lorvix Billing provides streamlined invoice management, expense tracking, and tax liability calculation for growing businesses. Create GST invoices and manage finances with ease.';
-      var canonical = 'https://lorvixsolutions.in/lorvix-billing';
+      var path = window.location.pathname.replace(/\/$/, '') || '/';
+      var page = pages[path];
+      if (!page) return;
+
+      var title = page.title;
+      var description = page.description;
+      var canonical = base + (path === '/' ? '/' : path);
 
       document.title = title;
 

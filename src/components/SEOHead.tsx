@@ -72,7 +72,7 @@ export default function SEOHead({
     // ── Standard SEO ──
     setMeta('name', 'description', description);
     setMeta('name', 'robots', noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
-    if (keywords) setMeta('name', 'keywords', keywords);
+    document.querySelector('meta[name="keywords"]')?.remove();
 
     // ── Canonical ──
     setLink('canonical', canonical);

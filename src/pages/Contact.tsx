@@ -73,7 +73,7 @@ const Contact = () => {
       });
 
     } catch (error) {
-      console.error("EmailJS error:", error); // See the full error in your terminal/console
+      console.error("Contact form error:", error);
       toast({
         title: "Error",
         description: `Failed to send message: ${error?.text || error?.message || "Unknown error"}`,
@@ -116,7 +116,7 @@ const Contact = () => {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Lorvix Solutions",
-    "description": "Get a free quote for your website development project in Chennai or the USA. Submit the form for the fastest response.",
+    "description": "Get a free quote for your website development project in Chennai, India, or remote markets. Share your scope and timeline for practical guidance.",
     "url": "https://lorvixsolutions.in/contact",
     "mainEntity": {
       "@id": "https://lorvixsolutions.in/#organization"
@@ -126,8 +126,8 @@ const Contact = () => {
   return (
     <div className="lx-root min-h-screen bg-white">
       <SEOHead 
-        title="Chennai Website Quote | Contact Lorvix Solutions | Fast EmailJS Response"
-        description="Submit your project requirements and get a Chennai website quote within 24 hours. Our EmailJS-powered contact form delivers fast, low-friction responses."
+        title="Contact Lorvix Solutions | Chennai Website Quote"
+        description="Submit your project requirements and get a Chennai website quote within 24 hours. We review your scope, timeline, and business goals before quoting."
         canonical="https://lorvixsolutions.in/contact"
         keywords="Chennai website quote, website design Chennai, emailjs contact form, hire web developer Chennai, web development quote Chennai"
         schema={contactSchema}
@@ -142,7 +142,7 @@ const Contact = () => {
             Get Your Business <span className="bg-gradient-primary bg-clip-text text-transparent">Online in Chennai</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Submit your project requirements through our EmailJS-powered form for the fastest quote. We respond quickly and help Chennai businesses launch websites fast.
+            Submit your project requirements for a practical quote. We review your goals, timeline, and budget before suggesting the right website structure.
           </p>
         </div>
       </section>

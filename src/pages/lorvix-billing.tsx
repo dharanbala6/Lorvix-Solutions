@@ -46,11 +46,6 @@ const Software = () => {
         "lowPrice": "0",
         "highPrice": "2499",
         "offerCount": "4"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "12"
       }
     }
   ];
@@ -264,7 +259,7 @@ const Software = () => {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <Rocket className="h-4 w-4" />
-                  Streamlined Billing Solutions · Free Forever Plan
+                  GST Billing for Small Businesses - Free Forever Plan
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
@@ -334,7 +329,7 @@ const Software = () => {
                   />
                 </div>
                 <div className="absolute -top-4 -right-4 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold shadow-lg">
-                  Enterprise-Ready Billing
+                  Live product dashboard
                 </div>
               </div>
             </div>

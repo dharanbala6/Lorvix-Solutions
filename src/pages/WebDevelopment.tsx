@@ -105,9 +105,9 @@ export default function WebDevelopment() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "World-Class Website Development & Digital Transformation",
+      "name": "Website Development for Business Enquiries",
       "provider": { "@id": "https://lorvixsolutions.in/#organization" },
-      "description": "High-performance website development services for a global market. We specialize in enterprise-grade web applications, world-class UX design, and scalable digital solutions.",
+      "description": "Website development services for businesses that need fast mobile pages, clear service structure, enquiry forms, WhatsApp actions, and practical SEO foundations.",
       "areaServed": ["Worldwide"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -163,11 +163,11 @@ export default function WebDevelopment() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.08] mb-6 tracking-tight">
-              World-Class <span className="lx-grad-text">Web Engineering</span>
+              Business Websites <span className="lx-grad-text">Built for Enquiries</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[480px] leading-relaxed">
-              We deliver <strong>affordable, enterprise-grade digital experiences</strong> that bridge the gap between imagination and technical reality.
+              We build <strong>fast, mobile-first websites</strong> that explain your services clearly, earn trust quickly, and make it easy for customers to call, WhatsApp, or request a quote.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">

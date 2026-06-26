@@ -62,7 +62,7 @@ const STYLES = `
   position: relative; overflow: hidden;
 }
 .lx-btn-shine::after {
-  content: '';
+  content: none;
   position: absolute;
   top: 0; left: -100%;
   width: 60%; height: 100%;
@@ -71,11 +71,7 @@ const STYLES = `
 }
 
 .lx-grad-text {
-  background: linear-gradient(135deg, #2563eb, #7c3aed, #2563eb);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: lx-gradient 4s linear infinite;
+  color: #1d4ed8;
 }
 
 .lx-card-hover {
@@ -83,9 +79,9 @@ const STYLES = `
               box-shadow .3s ease, border-color .3s ease;
 }
 .lx-card-hover:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 24px 60px rgba(37,99,235,.18);
-  border-color: #93c5fd !important;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15,23,42,.12);
+  border-color: #cbd5e1 !important;
 }
 
 .lx-port-card {
@@ -94,8 +90,8 @@ const STYLES = `
   cursor: pointer;
 }
 .lx-port-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 70px rgba(37,99,235,.2);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(15,23,42,.14);
 }
 .lx-port-card .port-shine {
   position: absolute; inset: 0;
@@ -121,8 +117,8 @@ const STYLES = `
               box-shadow .3s ease;
 }
 .lx-why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(37,99,235,.15);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(15,23,42,.12);
 }
 .lx-why-card:hover .why-icon {
   transform: scale(1.1) rotate(-3deg);
@@ -355,16 +351,16 @@ export default function Home() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
                 <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
-                World-Class Digital Experiences
+                Chennai Website Development
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.08] mb-6 tracking-tight">
-                Global Standards. <br />
-                <span className="lx-grad-text">Digital Perfection.</span>
+                Websites That Help <br />
+                <span className="lx-grad-text">Customers Contact You.</span>
               </h1>
 
               <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-[520px] leading-relaxed">
-                Lorvix Solutions is a <strong>world-class and affordable website development agency</strong>. We combine global design standards with <strong>cost-effective engineering</strong> to build high-performance digital platforms for businesses everywhere.
+                Lorvix Solutions builds <strong>fast, mobile-friendly business websites</strong> with clear service pages, portfolio proof, enquiry forms, and WhatsApp actions for Chennai, India, and remote clients.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -394,8 +390,8 @@ export default function Home() {
                 <p className="text-[10px] font-bold uppercase tracking-[.15em] text-slate-400 mb-4">Our Track Record</p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon: <Globe className="h-5 w-5" />, label: 'Websites Delivered', value: '5+' },
-                    { icon: <Star className="h-5 w-5" />, label: 'Client Satisfaction', value: '98%' },
+                    { icon: <Globe className="h-5 w-5" />, label: 'Live portfolio sites', value: '3' },
+                    { icon: <Star className="h-5 w-5" />, label: 'Industries served', value: '3+' },
                     { icon: <Clock className="h-5 w-5" />, label: 'Average Support Response', value: '2h' },
                     { icon: <Zap className="h-5 w-5" />, label: 'Weeks to Launch', value: '1–4wk' },
                   ].map((r, i) => (
@@ -446,7 +442,7 @@ export default function Home() {
                 Websites We've Already Delivered
               </h2>
               <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Not mockups. Not demos. Real businesses in Chennai — now online, ranking on Google, and getting enquiries every single day.
+                Not mockups. Not demos. Real businesses with live websites you can open, inspect, and compare before you talk to us.
               </p>
             </div>
 
@@ -628,7 +624,7 @@ export default function Home() {
               <div className="relative">
                 <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider">
                   <span className="relative lx-pulse-dot w-2 h-2 rounded-full bg-white flex-shrink-0" />
-                  Limited Slots Available This Month
+                  Free Website Scope Review
                 </div>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5 tracking-tight leading-tight">
                   Your Business Deserves a Website That Works

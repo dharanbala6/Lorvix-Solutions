@@ -111,13 +111,20 @@ function localBusinessSchema() {
       addressRegion: 'Tamil Nadu',
       addressCountry: 'IN',
     },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+919884948383',
+      contactType: 'sales',
+      areaServed: ['IN', 'US'],
+      availableLanguage: ['en', 'ta'],
+    },
     areaServed: [
       { '@type': 'City', name: 'Chennai' },
       { '@type': 'State', name: 'Tamil Nadu' },
       { '@type': 'Country', name: 'India' },
       { '@type': 'Country', name: 'United States' },
     ],
-    sameAs: [baseUrl],
+    sameAs: [],
   };
 }
 
